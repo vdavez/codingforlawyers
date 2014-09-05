@@ -10,14 +10,14 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/codingforlawyers/assets/css/bootstrap.min.css">
         <style>
 
         </style>
-        <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="/assets/css/main.css">
+        <link rel="stylesheet" href="/codingforlawyers/assets/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/codingforlawyers/assets/css/main.css">
 
-        <script src="/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="/codingforlawyers/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -29,49 +29,7 @@
     </div>
     <!-- Content goes here -->
 
-    <h1 id="chapter-1-regular-expressions">Chapter 1: Regular Expressions</h1>
-<p>We begin our exploration of coding with <strong>regular expressions</strong>.[^1] Sometimes referred to as &quot;regex&quot;, regular expressions are a way of representing patterns of characters used predefined rules. </p>
-<h1 id="regular-expressions">Regular Expressions</h1>
-<p>Regex may be intuitive for many lawyers, particularly those who were on law review.[^2] That&#39;s because citations and regular expressions are actually closely related.[^3] For example, lawyers know what <code>5 U.S.C. § 552 (2006)</code> is. We also know that <code>552 U.S. 5 (2007)</code> is a different thing entirely. The former is a statute enacted by Congress and codified in the United States Code. The latter is a reported decision of the Supreme Court of the United States published in the bound volumes of the United States Reports. But, let&#39;s examine them closely.</p>
-<p>A minimal citation to the United States Code has four main components: (1) the title of the United States Code; (2) &quot;U.S. §&quot;; (3) the specific section; and (4) the applicable date (though this is optional). Thus, we know that 42 U.S.C § 1983 is a valid citation to the United States Code, but U.S.C. § 42-1983 is not. Similarly, a minimal citation to the a bound volume of the United States Reports has three components: (1) the volume of the United States Reports; (2) &quot;U.S.&quot;; (3) the starting page for the reported opinion; and (4) the applicable date (this is not optional).</p>
-<DIAGRAM OF U.S.C. CITATION>
-
-<p>Regex allows us to assemble patterns so that a computer could recognize these patterns. Let&#39;s see how.</p>
-<h2 id="the-building-blocks-of-regex">The building blocks of regex</h2>
-<p>We know that as of September 1, 2014, there are 52 titles of the United States Code.[^3] We can therefore represent the first component of a citation to the United States Code as <code>[1-52]</code>. Note the brackets here. This means that any integer between 1 and 52 will be considered <em>valid</em> regex. So, &quot;18&quot; will be considered valid, but &quot;58&quot; will be rejected as invalid. We have just written our first regex. Great work!</p>
-<p><code>[1-52]</code> </p>
-<p>Encouraged by this success, you may be eager to skip over the &quot;U.S. §&quot; and go straight to the specific section itself, since we now know how to represent numbers! Let&#39;s indulge this zeal.</p>
-<p>Almost as soon as we start, though, there&#39;s a problem. We don&#39;t know how many sections there are in any given title. For a given title, there may be as few as 146 sections, like in Title 4 (&quot;Flag And Seal, Seat Of Government, And The States&quot;), or there may many more, even up to § 18445 in Title 42 (&quot;The Public Health And Welfare&quot;). And what if Congress adds a new section? Would we have to go back and change our regex everytime a law is passed?</p>
-<p>Happily, regex has a &quot;shorthand&quot; way of representing any single digit: <code>\d</code>. As a matter of semantics, then, <code>\d</code> shorthand is the same as <code>[0-9]</code>. If you repeat the shorthand (e.g., <code>\d\d</code>), you can represent any integer of a set number of digits. In other words, <code>\d\d</code> represents any two-digit number ([10-99]) and <code>\d\d\d</code> represents any three-digit number ([100-999]). And, importantly, you can even tell regex that you don&#39;t care <em>how many digits</em> using the plus sign (<code>+</code>). <em>Any positive integer</em> can be represented as follows: <code>\d+</code>.</p>
-<p>You may be wondering why there is a backslash in the shorthand. This is a good, and important question. Regex accept literal characters: <code>d</code> is the letter &quot;d&quot;, but <code>\d</code> is any integer between 0 and 9. In regex, the backslash has a special meaning and is called a &quot;metacharacter&quot;. A backslash signals to regex that whatever comes next is something to pay attention to. Similarly, the plus sign that we used before (<code>\d+</code>) is a metacharacter. The plus sign signals to regex that you can repeat the preceding regex group. </p>
-<p>In all, regex recognizes 12 metacharacters[^4], though describing all of them is beyond the scope of this chapter. For now, it is merely important to acknowledge that the period (<code>.</code>) and parentheses (<code>(</code> and <code>)</code>) are metacharacters too.[^5] The period (in regex, a &quot;dot&quot;) can represent <em>any</em> character. A regex in a parentheses is called a &quot;group.&quot; If we want to actually represent a metacharacter in the regex, we use a backslash to &quot;escape&quot; the metacharacter. In other words, if we want to use a period at the end of a sentence, we need to write <code>\.</code>, and if we want to use a backslash in our pattern, we need to write <code>\\</code>. </p>
-<p>By now, you already know a great deal about basic regex. For example, what if we wanted to represent &quot;552a&quot; or &quot;2000aa&quot;? We could do this by writing <code>\d+a+</code>. This would also match &quot;1a&quot; and &quot;1234aaaa&quot;. And if wanted to do &quot;2000bb&quot;, we could just change our regex to be as follows: <code>\d+[a-z]+</code>. This would represent &quot;1z&quot; and &quot;12345abcde&quot;. Regex also allows for the shorthand <code>\w</code>, which represents any single alphanumeric character. <em>Any word</em> can be represented by <code>\w+</code>. So, you could simply write the regular expression as <code>\d+\w+</code>. Think of <code>\w</code> as the ultimate Scrabble piece. Potent stuff.</p>
-<p>But, what if you wanted your pattern to match &quot;552a&quot; <em>and</em> &quot;552&quot;. In other words, you don&#39;t <em>necessarily</em> want any letters to come after the numbers. To do this, the question mark metacharacter (<code>?</code>) comes into play. Here, you could simply write <code>552a?</code>, which means that the &quot;a&quot; is optional. By using parentheses for grouping, you can supercharge the use of the <code>?</code>. For example, you could write <code>(\d+)(\w+)?</code>, which would cover &quot;552&quot;, &quot;552a&quot;, and &quot;2000bb&quot;. By grouping the repeating alphanumeric characters represented by <code>\w</code> and putting a question mark afterward, you can basically make all of the letters optional. </p>
-<h2 id="assembling-the-united-states-code">Assembling the United States Code</h2>
-<p>Believe it or not, we know everything to represent the minimal citation to a section in the United States Code (and even more complicated ones!). Let&#39;s return to the 4 minimum components of the citation: </p>
-<DIAGRAM OF U.S.C. CITATION>
-
-<p>First, there is the title: <code>[1-52]</code>. Second there is the &quot;U.S.C. §&quot;, which requires some escaping of the periods but is written as follows: <code>U\.S\.C\. §</code>. Third, there is the section: <code>\d+(\w+)?</code>.[^5] And finally, there is the date: <code>\([19-20]\d\d\)</code>[^6]. As a reminder for the date, before we put it all together: the date is optional.</p>
-<p>Now, let&#39;s put together the citation:</p>
-<p><code>[1-52] U\.S\.\C. § \d+(\w+)?( \([19-20]\d\d\))?</code></p>
-<p>Congratulations. You have constructed a relatively complex regex! And there&#39;s more good news, the road gets easier from here.</p>
-<h2 id="homework">Homework</h2>
-<ol>
-<li><p>Practice with a website.</p>
-</li>
-<li><p>Extend the regular expression to capture subsections and paragraphs.</p>
-</li>
-<li><p>Write a regular expression to capture an email address.</p>
-</li>
-</ol>
-<hr>
-<p>[^1]: Many programmers would, I suspect, suggest that this is a strange place to begin. They would argue that it is not really even <em>coding</em>. It is my view that this is a proper subject for a beginning chapter. <em>Cf.</em> <em>Brown v. Allen</em>, 344 U.S. 443, 540 (1953) (Jackson, J., concurring) (&quot;There is no doubt that if there were a super-Supreme Court, a substantial proportion of our reversals of state courts would also be reversed. We are not final because we are infallible, but we are infallible only because we are final.&quot;). Plus, by the time you are done with this chapter, you can impress your coding friends that you know basic &quot;regex&quot;. A word of caution, the universe of non-coders who will be impressed your knowledge of regex is rather small. </p>
-<p>[^2]: A quick review of my curriculm vitae demonstrates that I was not on law review in law school. I am using many footnotes to compensate.</p>
-<p>[^3]: Editorial Reclassification, Title 52, United States Code, <em>available online at</em> <a href="http://uscode.house.gov/editorialreclassification/t52/index.html">http://uscode.house.gov/editorialreclassification/t52/index.html</a>.</p>
-<p>[^4]: List of all twelve metacharacters. &quot;the backslash \, the caret ^, the dollar sign $, the period or dot ., the vertical bar or pipe symbol |, the question mark ?, the asterisk or star *, the plus sign +, the opening parenthesis (, the closing parenthesis ), the opening square bracket [, and the opening curly brace {.&quot; Source: http://www.regular-expressions.info/quickstart.html</p>
-<p>[^5]: A different, and more typical, way of writing this would be to use the asterisk <code>*</code> metacharacter. Using <code>*</code> matches whatever precedes it zero or more times. Accordingly, <code>.*</code> matches &quot;a&quot; or &quot;abc123&quot; or even nothing at all. Ultimately, then, the pattern <code>\d+(\w+)?</code> could also have been written as <code>\d+\w*</code>.</p>
-<p>[^6]: There are multiple candidates for representing the date. Another might be <code>\d\d\d\d</code>. An advanced regex user might use <code>([0-9]{4}</code>, which means any four-digit number. I took the license to demonstrate that you can mix and match.</p>
-
+    
     
       <hr>
 
@@ -80,9 +38,9 @@
       </footer>
     </div> <!-- /container -->        
 
-        <script src="/assets/js/vendor/jquery-1.11.0.min.js"></script>
-        <script src="/assets/js/vendor/bootstrap.min.js"></script>
-        <script src="/assets/js/main.js"></script>
+        <script src="/codingforlawyers/assets/js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="/codingforlawyers/assets/js/vendor/bootstrap.min.js"></script>
+        <script src="/codingforlawyers/assets/js/main.js"></script>
         <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -7,16 +7,16 @@ var fs = require('fs');
 
 function makePages() {
  fs.readFile(__dirname + '/templates/_.base', {"encoding":"utf-8"}, function (err, site) {
-  fs.readdir(__dirname + '/chapters/', function (err, files) {
+  fs.readdir(__dirname + '/md/', function (err, files) {
    files.forEach(function (file, index, array) {
     fs.readFile(__dirname + '/chapters/' + file, {"encoding":"utf-8", "flag":"r"}, function (err, data) {
      marked(data, {gfm: false, breaks:false, renderer: new marked.Renderer()}, function (err, file_contents) {
       try {
-        fs.mkdirSync(__dirname + '/www/chapters/'+ path.basename(file, '.md'));
+        fs.mkdirSync(__dirname + '/chapters/'+ path.basename(file, '.md'));
       }
       catch (e) {        
       }
-      fs.writeFile(__dirname + '/www/chapters/'+ path.basename(file, '.md') + '/index.html', swig.render(site, {autoescape: false, locals:{content:file_contents}}), function (err) {
+      fs.writeFile(__dirname + '/chapters/'+ path.basename(file, '.md') + '/index.html', swig.render(site, {autoescape: false, locals:{content:file_contents}}), function (err) {
        if (err) throw err;
        console.log(file + " converted")
       })

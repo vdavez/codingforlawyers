@@ -10,14 +10,14 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/codingforlawyers/assets/css/bootstrap.min.css">
         <style>
 
         </style>
-        <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="/assets/css/main.css">
+        <link rel="stylesheet" href="/codingforlawyers/assets/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/codingforlawyers/assets/css/main.css">
 
-        <script src="/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="/codingforlawyers/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -29,46 +29,7 @@
     </div>
     <!-- Content goes here -->
 
-    <h1 id="chapter-3-data-types">Chapter 3: Data Types</h1>
-<p>Data types are one of the key building blocks of coding. They allow the developer and the computer to communicate with each other. </p>
-<p>Think of data types like exhibits at trial. You need exhibits to prove facts at trial. You need to lay the foundation before you can introduce them. And there are rules about how you can use them once they&#39;ve been properly introduced. But, by themselves, they don&#39;t <em>do</em> anything necessarily. They&#39;re just exhibits.</p>
-<p>With that analogy firmly set, let&#39;s introduce these exhibits.</p>
-<h2 id="exhibit-1-strings">Exhibit 1: Strings</h2>
-<p>Of all of the data types, lawyers should feel most comfortable with strings. That&#39;s because a string is nothing but a collection of characters, typically set off by quotation marks. So, for example: <code>&quot;this is a string&quot;</code> and <code>&quot;We the People&quot;</code> are both strings. Many programming languages allow for using single quotes, as well, such that <code>&quot;this is a string&quot;</code> and <code>&#39;this is a string&#39;</code> are equal to each other.     </p>
-<h2 id="exhibit-2-integers">Exhibit 2: Integers</h2>
-<p>Integers are just what you&#39;d expect them to be. They are whole numbers, positive and negative. <code>1</code> is an integer. <code>2</code> is an integer. <code>three</code> is NOT an integer, however, and neither is <code>1.5</code>. </p>
-<h2 id="exhibit-3-floats">Exhibit 3: Floats</h2>
-<p>Just a moment ago, when looking at integers Exhibit 2, we observed that <code>1.5</code> is not an integer. Instead, it is considered to be a &quot;float&quot;, because it has a  &quot;floating decimal&quot;. The following are all examples of floats: <code>3.14</code>, <code>2.1828</code>, and <code>0.0001</code>.</p>
-<h2 id="exhibit-4-booleans">Exhibit 4: Booleans</h2>
-<p>Sometimes, you just want a witness to answer &quot;yes&quot; or &quot;no&quot;. Although it can be an art to get a witness to do this, it is trivial to ask a computer to do it. That&#39;s because of booleans. A boolean is either <code>True</code> or <code>False</code>.</p>
-<p>Your honor, may we approach?</p>
-<h2 id="a-brief-sidebar-about-variables">A brief sidebar about variables</h2>
-<p>The power of data types, like exhibits, is that once they&#39;ve been properly introduced, you can refer to them directly. Computers do this by &quot;defining a variable&quot;. Different programming languages have different ways of doing this, but the concept is always the same. You define the variable and then you can use it. For the purpose of this chapter, we&#39;re going to use the syntax associated with the Python programming language, primarily because it is very simple.</p>
-<p>Let&#39;s go ahead and define a variable &quot;case_name&quot; to be the string &quot;Marbury v. Madison&quot; . To do this, all you need to write is:</p>
-<p><code>case_name = &quot;Marbury v. Madison&quot;</code></p>
-<p>Couldn&#39;t be simpler, right? Ok, sidebar over.</p>
-<h2 id="exhibit-5-array">Exhibit 5: Array</h2>
-<p>An array, despite its total simplicity, is a surprisingly powerful data type. An array is a list of data. That&#39;s it.  Here&#39;s an example of an array:</p>
-<p><code>[&quot;Roberts&quot;,&quot;Kennedy&quot;,&quot;Scalia&quot;,&quot;Thomas&quot;,&quot;Ginsburg&quot;,&quot;Kagan&quot;,&quot;Sotomayor&quot;,&quot;Alito&quot;,&quot;Breyer&quot;]</code></p>
-<p>Piece of cake? Good.</p>
-<h2 id="exhibit-6-objects">Exhibit 6: Objects</h2>
-<p>As a thought experiment, try to describe a music album. You might describe the group that made the album. You might list the names of the tracks. You might describe the year that the album was released.</p>
-<p>So, for example, &quot;Hey Jude&quot; by the Beatles, might be described as: </p>
-<p><code>{
-    &quot;title&quot;: &quot;Hey Jude&quot;
-    &quot;group&quot;: &quot;Beatles&quot;,
-    &quot;tracks&quot;: [&quot;Can&#39;t Buy Me Love&quot;,&quot;I Should Have Known Better&quot;,&quot;Paperback Writer&quot;,&quot;Rain&quot;,&quot;Lady Madonna&quot;,&quot;Revolution&quot;,&quot;Hey Jude&quot;,&quot;Old Brown Shoe&quot;,&quot;Don&#39;t Let Me Down&quot;,&quot;The Ballad of John and Yoko&quot;],
-    &quot;released&quot;:1970
-}</code></p>
-<p>This is an object. It uses &quot;keys&quot; and &quot;values&quot; to describe attributes of the object. Let&#39;s define a variable &quot;scotus&quot; as an object:</p>
-<p><code>scotus = {
-    &quot;name&quot;: &quot;Supreme Court of the United States&quot;,
-    &quot;justices&quot;: [&quot;Roberts&quot;,&quot;Kennedy&quot;,&quot;Scalia&quot;,&quot;Thomas&quot;,&quot;Ginsburg&quot;,&quot;Kagan&quot;,&quot;Sotomayor&quot;,&quot;Alito&quot;,&quot;Breyer&quot;]
-}</code></p>
-<p>The reason objects are special is that you can access the attributes in a powerful way. So, for example, if you asked the computer what <code>scotus[&quot;name&quot;]</code> is, the computer would say: <code>&quot;Supreme Court of the United States&quot;</code>.</p>
-<h1 id="conclusion">Conclusion</h1>
-<p>Throughout the rest of this book, we&#39;ll spend a lot of time manipulating these data types. Remember, they are just exhibits. The real power in coding is using these exhibits to make your case. In the next chapter, we&#39;ll take a closer look at arrays and write our first script.</p>
-
+    
     
       <hr>
 
@@ -77,9 +38,9 @@
       </footer>
     </div> <!-- /container -->        
 
-        <script src="/assets/js/vendor/jquery-1.11.0.min.js"></script>
-        <script src="/assets/js/vendor/bootstrap.min.js"></script>
-        <script src="/assets/js/main.js"></script>
+        <script src="/codingforlawyers/assets/js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="/codingforlawyers/assets/js/vendor/bootstrap.min.js"></script>
+        <script src="/codingforlawyers/assets/js/main.js"></script>
         <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
