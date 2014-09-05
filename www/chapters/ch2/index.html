@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Coding for Lawyers</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <style>
+
+        </style>
+        <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/assets/css/main.css">
+
+        <script src="/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="container">
+    <div class="jumbotron">
+    <a href="/"><h1>Coding For Lawyers</h1></a>
+    </div>
+    <!-- Content goes here -->
+
+    <h1 id="chapter-2-markdown-and-html">Chapter 2: Markdown and HTML</h1>
+<p>Having survived regex, the next topic is absurdly easy. That topic is &quot;Markdown&quot;.</p>
+<p>Before diving into Markdown, and at the risk of alienating many readers, I want to remind you of your law-school days. Then (and perhaps even now), when reading a case, you would have a set of highlighters and pens all aimed at allowing you to quickly identify key passages, find the holding, and otherwise annotate important things about a case. Remember that? You would actually <em>mark</em> text with a sort of <em>marker</em>? </p>
+<p>Markdown, when it gets right down to it, is just a way to &quot;mark up&quot; text and describe certain things to a computer, so the computer knows what is important to the eventual reader. That&#39;s it. It&#39;s a simple, powerful way of making all kinds of marks around plain text in order to make the text more useable.</p>
+<h2 id="an-intro-to-markdown-syntax">An Intro to Markdown Syntax</h2>
+<p>Let&#39;s say you want to italicize a sentence in a document. In a word processor, you would highlight the sentence and either press Ctrl-I or the little &quot;italics&quot; icon. I suppose there may be other ways, but that&#39;s the conventional one.</p>
+<p>[[MARGINALIA: &quot;USE AN ASTERISK FOR ITALICS&quot;]] In Markdown, you put an asterisk before and after the sentence. So <code>*this is an example of an italicized phrase*</code> would look like: <em>this is an example of an italicized phrase</em>. </p>
+<p>[[MARGINALIA: &quot;USE TWO ASTERISKS FOR BOLD&quot;]] Let&#39;s say you wanted to make a word bold? In Markdown, you put <em>two</em> asterisks before and after the word. So <code>**bold**</code> looks like: <strong>bold</strong>. </p>
+<p>And if you want something italicized <em>and</em> bold? You&#39;ve got it: <em>three</em> asterisks. <code>***italicized and bold***</code> looks like: <strong><em>italicized and bold</em></strong>.</p>
+<p>So far so good. But, this is intended for the Internet. So, let&#39;s try something a little more exciting: a link to a website.</p>
+<p>[[MARGINALIA RE URL]] A link to a website requires only slightly more markup. To include a link to this book&#39;s website, you would need to put brackets around the link, and put the URL[^X] within parentheses. So, <code>Tell your friends to visit [Coding for Lawyers](http://codingforlawyers.com)</code> would look like: Tell your friends to visit <a href="https://codingforlawyers.com">Coding for Lawyers</a>. </p>
+<h2 id="an-intro-to-html">An intro to HTML</h2>
+<p>Now that you understand a bit of Markdown syntax, we&#39;ll turn attention briefly to HTML. As it turns out, the main <em>reason</em> Markdowneven  exists  is that writing HTML is annoying. Now, you may be asking, &quot;why would anyone write HTML?&quot; And perhaps before that, you may be asking, &quot;what is HTML?&quot;</p>
+<p>HTML is the face of the Internet. Indeed, you are actually reading a page written in HTML <em>right now.</em> In short, HTML document is a way to present content to a user on the Internet. It is  not an overstatement that HTML is the most important standard on the Internet.</p>
+<p>But despite its incredible importance, writing in HTML is a total pain. Here&#39;s why.</p>
+<p>We just learned that to represent an italicized phrase in Markdown, all you need to do is place the phrase within two asterisks. E.g., <code>&quot;This is a *test of Markdown*.&quot;</code>. In HTML, though, this would be replaced with <code>&quot;This is a &lt;em&gt;test of Markdown&lt;/em&gt;.&quot;</code> And if you wanted to make it italicized and bold, you would need to write &quot;<code>This is a &lt;strong&gt;&lt;em&gt;test of Markdown&lt;/em&gt;&lt;/strong&gt;.</code>&quot;</p>
+<p>What is happening there? Well, HTML uses &quot;tags&quot; to semantically describe text. So, the <code>&lt;em&gt;</code> tag tells the browser that everything between the <code>&lt;em&gt;</code> tag and the <code>&lt;/em&gt;</code> tag should be italicized. Similarly, if you use the <code>&lt;strong&gt;</code> tag, the browser understands that everything before the &quot;opening&quot; <code>&lt;strong&gt;</code> tag and the &quot;closing&quot; <code>&lt;/strong&gt;</code> tag should be bold.</p>
+<p>But the link to another website is a little more complicated. HTML uses what&#39;s called an &quot;anchor&quot; tag (<code>&lt;a&gt;</code>) to describe a link. So, if you <code>Tell your friends to visit &lt;a&gt;Coding for Lawyers&lt;/a&gt;</code>, there is an anchor around &quot;Coding for Lawyers.&quot; But if you click on that link, it wouldn&#39;t go anywhere, because the target of the link is not defined.</p>
+<p>To define the link&#39;s target, you define an &quot;attribute&quot; for the tag. Specifically, you would define the &quot;href&quot; attribute. To do this, you would write: <code>Tell your friends to visit &lt;a href=&quot;http://codingforlawyers.com&quot;&gt;Coding for Lawyers&lt;/a&gt;</code>. </p>
+<p>If you copied and pasted this exact phrase into a plain text file, saved it as &quot;test.html&quot;, and opened that file in a browser, you would have a working HTML document. Neat, huh?</p>
+<h2 id="more-syntax-in-markdown-and-html">More syntax in Markdown and HTML</h2>
+<p>Recognizing that Markdown and HTML are closely related, let&#39;s explore some more Markdown and HTML syntax.</p>
+<p>Let&#39;s say you wanted to make a page that has a link to each federal court&#39;s ECF site within your given state.[^X] For this example, I will pick Virginia, which has three federal courts:</p>
+<ol>
+<li>U.S. District Court for the Eastern District of Virginia,</li>
+<li>U.S. District Court for the Western District of Virginia, and</li>
+<li>U.S. Court of Appeals for the Fourth Circuit.</li>
+</ol>
+<p>Happily, the URL naming scheme is common to all three courts: &quot;https://ecf.{courtname}.uscourts.gov&quot;[^X]. As we know, in Markdown, writing the link is pretty easy.  </p>
+<p><code>1. [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
+2. [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
+3. [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).</code></p>
+<p>As it turns out, this is also all you need to do to write a numbered list in Markdown. If you converted the Markdown into HTML, it would appear as follows:</p>
+<p>```</p>
+<p><ol></p>
+<p><li><a href="https://ecf.vaed.uscourts.gov">U.S. District Court for the Eastern District of Virginia</a>,</li></p>
+<p><li><a href="https://ecf.vawd.uscourts.gov">U.S. District Court for the Eastern District of Virginia</a>, and</li></p>
+<p><li><a href="https://ecf.ca4.uscourts.gov">U.S. Court of Appeals for the Fourth Circuit</a>.</li>
+</ol>
+```</p>
+<p>You can see that this has more complexity. Let&#39;s unpack it a bit. The top tag is <code>&lt;ol&gt;</code>, which stands for &quot;ordered list.&quot; An ordered list is numbered (more accurately, the order in the list matters). Then, within the <code>&lt;ol&gt;</code> tag there is an <code>&lt;li&gt;</code> tag. This is a &quot;list item.&quot; You&#39;re already familiar with the <code>&lt;a&gt;</code> tag and the href attribute.</p>
+<p>We can also change the list from an ordered list to an unordered list (such as a set of bullet points). To accomplish that, all we need to do is substitute <code>&lt;ul&gt;</code> for <code>&lt;ol&gt;</code> in the opening and closing tags. In Markdown, you can use asterisks or hyphens. For example: </p>
+<p><code>* [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
+* [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
+* [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).</code></p>
+<p>We could stop there. But, let&#39;s gussy it up a little more. What if we wanted a heading? Something that said &quot;Virginia Federal Courts&quot; and then &quot;District&quot; and &quot;Circuit&quot; as smaller headings. Markdown makes this easy:</p>
+<p>```</p>
+<h1 id="virgina-federal-courts">Virgina Federal Courts</h1>
+<h2 id="district">District</h2>
+<ul>
+<li><a href="https://ecf.vaed.uscourts.gov">U.S. District Court for the Eastern District of Virginia</a>,</li>
+<li><a href="https://ecf.vawd.uscourts.gov">U.S. District Court for the Western District of Virginia</a>, and</li>
+</ul>
+<h2 id="circuit">Circuit</h2>
+<ul>
+<li><a href="https://ecf.ca4.uscourts.gov">U.S. Court of Appeals for the Fourth Circuit</a>.
+```</li>
+</ul>
+<p>This would translate to the following HTML:</p>
+<p>```</p>
+<p><h1>Virgina Federal Courts</h1></p>
+<p><h2>District</h2></p>
+<p><ul></p>
+<p><li><a href="https://ecf.vaed.uscourts.gov">U.S. District Court for the Eastern District of Virginia</a>,</li></p>
+<p><li><a href="https://ecf.vawd.uscourts.gov">U.S. District Court for the Western District of Virginia</a>, and</li>
+</ul></p>
+<p><h2>Circuit</h2></p>
+<p><ul></p>
+<p><li><a href="https://ecf.ca4.uscourts.gov">U.S. Court of Appeals for the Fourth Circuit</a>.</li>
+</ul>
+```</p>
+<p>Take note that HTML describes the heading as <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code>. This is baked into HTML to show these as headings. Also take note that the District and Circuit lists are separate unordered lists, so the HTML must close the first <code>&lt;ul&gt;</code> tag before the Circuit heading is introduced. </p>
+<p>Try to copy and paste that HTML into a plain text file, save it as &quot;ecf_va.html&quot;, and open the file in the browser. Voila, you have  a working HTML file with a link to the Virgina federal courts&#39; ECF sites.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>At this point, you should have a sense of how Markdown and HTML look and interact with each other. You should take time to learn the Markdown syntax from the official specification. There are a few other use cases -- especially blockquotes -- in Markdown that you should be aware of. </p>
+<p>Getting to fully understand HTML, on the other hand, can be much more involved.  HTML5 is remarkably mature, with many ways to customize the presentation of content on the web. There are a number of good tutorials to get you up to speed with more advanced uses of HTML. E.g., <a href="http://www.codecademy.com/en/tracks/htmlcss">http://www.codecademy.com/en/tracks/htmlcss</a> &amp; <a href="http://learn.shayhowe.com/html-css/">http://learn.shayhowe.com/html-css/</a>. You should take some time to explore them.</p>
+<p>If you stopped here, you would be able to meaningfully build beautiful websites using Markdown. But you won&#39;t stop here, because it keeps gets better...</p>
+<hr>
+<p>[^1]: At some point, you should read the entire Markdown syntax documentation. It is very short, but covers a significant amount of ground. You should also know that there are many different &quot;flavors&quot; of Markdown. A flavor is a subtle variation of Markdown to provide specific features, such as footnotes. </p>
+<p>[^X]: A URL?!</p>
+<p>[^X]: If you don&#39;t know what ECF is, you are not a litigator.</p>
+<p>[^X]: Suppose you wanted to automatically determine the court based on the URL, you could write a regular expression to extract the court: <code>https:\/\/ecf\.(\w+)\.uscourts\.gov</code>.</p>
+
+    
+      <hr>
+
+      <footer>
+        <p>&copy; V. David Zvenyach (dave@esq.io) 2014</p>
+      </footer>
+    </div> <!-- /container -->        
+
+        <script src="/assets/js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="/assets/js/vendor/bootstrap.min.js"></script>
+        <script src="/assets/js/main.js"></script>
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46841105-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    </body>
+</html>
