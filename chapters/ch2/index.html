@@ -25,7 +25,7 @@
         <![endif]-->
     <div class="container">
     <div class="jumbotron">
-    <a href=""><h1>Coding For Lawyers</h1></a>
+    <a href="/"><h1>Coding For Lawyers</h1></a>
     </div>
     <!-- Content goes here -->
 
@@ -39,7 +39,7 @@
 <p>[[MARGINALIA: &quot;USE TWO ASTERISKS FOR BOLD&quot;]] Let&#39;s say you wanted to make a word bold? In Markdown, you put <em>two</em> asterisks before and after the word. So <code>**bold**</code> looks like: <strong>bold</strong>. </p>
 <p>And if you want something italicized <em>and</em> bold? You&#39;ve got it: <em>three</em> asterisks. <code>***italicized and bold***</code> looks like: <strong><em>italicized and bold</em></strong>.</p>
 <p>So far so good. But, this is intended for the Internet. So, let&#39;s try something a little more exciting: a link to a website.</p>
-<p>[[MARGINALIA RE URL]] A link to a website requires only slightly more markup. To include a link to this book&#39;s website, you would need to put brackets around the link, and put the URL[^X] within parentheses. So, <code>Tell your friends to visit [Coding for Lawyers](http://codingforlawyers.com)</code> would look like: Tell your friends to visit <a href="http://codingforlawyers.com">Coding for Lawyers</a>. </p>
+<p>[[MARGINALIA RE URL]] A link to a website requires only slightly more markup. To include a link to this book&#39;s website, you would need to put brackets around the link, and put the URL<sup><a href="#fn_X" id="reffn_X">X</a></sup> within parentheses. So, <code>Tell your friends to visit [Coding for Lawyers](http://codingforlawyers.com)</code> would look like: Tell your friends to visit <a href="https://codingforlawyers.com">Coding for Lawyers</a>. </p>
 <h2 id="an-intro-to-html">An intro to HTML</h2>
 <p>Now that you understand a bit of Markdown syntax, we&#39;ll turn attention briefly to HTML. As it turns out, the main <em>reason</em> Markdowneven  exists  is that writing HTML is annoying. Now, you may be asking, &quot;why would anyone write HTML?&quot; And perhaps before that, you may be asking, &quot;what is HTML?&quot;</p>
 <p>HTML is the face of the Internet. Indeed, you are actually reading a page written in HTML <em>right now.</em> In short, HTML document is a way to present content to a user on the Internet. It is  not an overstatement that HTML is the most important standard on the Internet.</p>
@@ -51,13 +51,13 @@
 <p>If you copied and pasted this exact phrase into a plain text file, saved it as &quot;test.html&quot;, and opened that file in a browser, you would have a working HTML document. Neat, huh?</p>
 <h2 id="more-syntax-in-markdown-and-html">More syntax in Markdown and HTML</h2>
 <p>Recognizing that Markdown and HTML are closely related, let&#39;s explore some more Markdown and HTML syntax.</p>
-<p>Let&#39;s say you wanted to make a page that has a link to each federal court&#39;s ECF site within your given state.[^X] For this example, I will pick Virginia, which has three federal courts:</p>
+<p>Let&#39;s say you wanted to make a page that has a link to each federal court&#39;s ECF site within your given state.<sup><a href="#fn_X" id="reffn_X">X</a></sup> For this example, I will pick Virginia, which has three federal courts:</p>
 <ol>
 <li>U.S. District Court for the Eastern District of Virginia,</li>
 <li>U.S. District Court for the Western District of Virginia, and</li>
 <li>U.S. Court of Appeals for the Fourth Circuit.</li>
 </ol>
-<p>Happily, the URL naming scheme is common to all three courts: &quot;https://ecf.{courtname}.uscourts.gov&quot;[^X]. As we know, in Markdown, writing the link is pretty easy.  </p>
+<p>Happily, the URL naming scheme is common to all three courts: &quot;https://ecf.{courtname}.uscourts.gov&quot;<sup><a href="#fn_X" id="reffn_X">X</a></sup>. As we know, in Markdown, writing the link is pretty easy.  </p>
 <p><code>1. [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
 2. [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
 3. [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).</code></p>
@@ -107,10 +107,18 @@
 <p>Getting to fully understand HTML, on the other hand, can be much more involved.  HTML5 is remarkably mature, with many ways to customize the presentation of content on the web. There are a number of good tutorials to get you up to speed with more advanced uses of HTML. E.g., <a href="http://www.codecademy.com/en/tracks/htmlcss">http://www.codecademy.com/en/tracks/htmlcss</a> &amp; <a href="http://learn.shayhowe.com/html-css/">http://learn.shayhowe.com/html-css/</a>. You should take some time to explore them.</p>
 <p>If you stopped here, you would be able to meaningfully build beautiful websites using Markdown. But you won&#39;t stop here, because it keeps gets better...</p>
 <hr>
-<p>[^1]: At some point, you should read the entire Markdown syntax documentation. It is very short, but covers a significant amount of ground. You should also know that there are many different &quot;flavors&quot; of Markdown. A flavor is a subtle variation of Markdown to provide specific features, such as footnotes. </p>
-<p>[^X]: A URL?!</p>
-<p>[^X]: If you don&#39;t know what ECF is, you are not a litigator.</p>
-<p>[^X]: Suppose you wanted to automatically determine the court based on the URL, you could write a regular expression to extract the court: <code>https:\/\/ecf\.(\w+)\.uscourts\.gov</code>.</p>
+<blockquote id="fn_1">
+<sup>1</sup>. At some point, you should read the entire Markdown syntax documentation. It is very short, but covers a significant amount of ground. You should also know that there are many different &quot;flavors&quot; of Markdown. A flavor is a subtle variation of Markdown to provide specific features, such as footnotes. <a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_X">
+<sup>X</sup>. A URL?!<a href="#reffn_X" title="Jump back to footnote [X] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_X">
+<sup>X</sup>. If you don&#39;t know what ECF is, you are not a litigator.<a href="#reffn_X" title="Jump back to footnote [X] in the text."> &#8617;</a>
+</blockquote>
+<blockquote id="fn_X">
+<sup>X</sup>. Suppose you wanted to automatically determine the court based on the URL, you could write a regular expression to extract the court: <code>https:\/\/ecf\.(\w+)\.uscourts\.gov</code>.<a href="#reffn_X" title="Jump back to footnote [X] in the text."> &#8617;</a>
+</blockquote>
 
     
       <hr>

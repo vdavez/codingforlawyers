@@ -2,6 +2,7 @@
 
 var swig = require('swig');
 var marked = require('marked');
+var kramed = require('kramed');
 var path = require('path');
 var fs = require('fs');
 
@@ -10,7 +11,7 @@ function makePages() {
   fs.readdir(__dirname + '/md/', function (err, files) {
    files.forEach(function (file, index, array) {
     fs.readFile(__dirname + '/md/' + file, {"encoding":"utf-8", "flag":"r"}, function (err, data) {
-     marked(data, {gfm: false, breaks:false, renderer: new marked.Renderer()}, function (err, file_contents) {
+     kramed(data, {gfm: false, breaks:false, smartLists: true, renderer: new kramed.Renderer()}, function (err, file_contents) {
       try {
         fs.mkdirSync(__dirname + '/chapters/'+ path.basename(file, '.md'));
       }
