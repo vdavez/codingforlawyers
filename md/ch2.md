@@ -6,7 +6,7 @@ Before diving into Markdown, and at the risk of alienating many readers, I want 
 
 Markdown, when it gets right down to it, is just a way to "mark up" text and describe certain things to a computer, so the computer knows what is important to the eventual reader. That's it. It's a simple, powerful way of making all kinds of marks around plain text in order to make the text more useable.
 
-## An Intro to Markdown Syntax
+## An Intro to Markdown Syntax[^1]
 
 Let's say you want to italicize a sentence in a document. In a word processor, you would highlight the sentence and either press Ctrl-I or the little "italics" icon. I suppose there may be other ways, but that's the conventional one.
 
@@ -18,7 +18,7 @@ And if you want something italicized *and* bold? You've got it: *three* asterisk
 
 So far so good. But, this is intended for the Internet. So, let's try something a little more exciting: a link to a website.
 
-[[MARGINALIA RE URL]] A link to a website requires only slightly more markup. To include a link to this book's website, you would need to put brackets around the link, and put the URL[^X] within parentheses. So, `Tell your friends to visit [Coding for Lawyers](http://codingforlawyers.com)` would look like: Tell your friends to visit [Coding for Lawyers](https://codingforlawyers.com). 
+[[MARGINALIA RE URL]] A link to a website requires only slightly more markup. To include a link to this book's website, you would need to put brackets around the link, and put the URL[^2] within parentheses. So, `Tell your friends to visit [Coding for Lawyers](http://codingforlawyers.com)` would look like: Tell your friends to visit [Coding for Lawyers](https://codingforlawyers.com). 
 
 ## An intro to HTML
 
@@ -42,69 +42,61 @@ If you copied and pasted this exact phrase into a plain text file, saved it as "
 
 Recognizing that Markdown and HTML are closely related, let's explore some more Markdown and HTML syntax.
 
-Let's say you wanted to make a page that has a link to each federal court's ECF site within your given state.[^X] For this example, I will pick Virginia, which has three federal courts:
+Let's say you wanted to make a page that has a link to each federal court's ECF site within your given state.[^3] For this example, I will pick Virginia, which has three federal courts:
 
 1. U.S. District Court for the Eastern District of Virginia,
 2. U.S. District Court for the Western District of Virginia, and
 3. U.S. Court of Appeals for the Fourth Circuit.
 
-Happily, the URL naming scheme is common to all three courts: "https://ecf.{courtname}.uscourts.gov"[^X]. As we know, in Markdown, writing the link is pretty easy.  
+Happily, the URL naming scheme is common to all three courts: "https://ecf.{courtname}.uscourts.gov"[^4]. As we know, in Markdown, writing the link is pretty easy.  
 
-```
-1. [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
-2. [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
-3. [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).
-```
+	1. [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
+	2. [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
+	3. [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).
 
 As it turns out, this is also all you need to do to write a numbered list in Markdown. If you converted the Markdown into HTML, it would appear as follows:
 
-```
-<ol>
-<li><a href="https://ecf.vaed.uscourts.gov">U.S. District Court for the Eastern District of Virginia</a>,</li>
-<li><a href="https://ecf.vawd.uscourts.gov">U.S. District Court for the Eastern District of Virginia</a>, and</li>
-<li><a href="https://ecf.ca4.uscourts.gov">U.S. Court of Appeals for the Fourth Circuit</a>.</li>
-</ol>
-```
+	<ol>
+	<li><a href="https://ecf.vaed.uscourts.gov">U.S. District Court for the Eastern District of Virginia</a>,</li>
+	<li><a href="https://ecf.vawd.uscourts.gov">U.S. District Court for the Eastern District of Virginia</a>, and</li>
+	<li><a href="https://ecf.ca4.uscourts.gov">U.S. Court of Appeals for the Fourth Circuit</a>.</li>
+	</ol>
 
 You can see that this has more complexity. Let's unpack it a bit. The top tag is `<ol>`, which stands for "ordered list." An ordered list is numbered (more accurately, the order in the list matters). Then, within the `<ol>` tag there is an `<li>` tag. This is a "list item." You're already familiar with the `<a>` tag and the href attribute.
 
 We can also change the list from an ordered list to an unordered list (such as a set of bullet points). To accomplish that, all we need to do is substitute `<ul>` for `<ol>` in the opening and closing tags. In Markdown, you can use asterisks or hyphens. For example: 
 
-```
-* [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
-* [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
-* [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).
-```
+	* [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
+
+	* [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
+
+	* [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).
 
 We could stop there. But, let's gussy it up a little more. What if we wanted a heading? Something that said "Virginia Federal Courts" and then "District" and "Circuit" as smaller headings. Markdown makes this easy:
 
-```
-# Virgina Federal Courts
+	# Virgina Federal Courts
 
-## District
+	## District
 
-* [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
-* [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
+	* [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
+	* [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
 
-## Circuit
+	## Circuit
 
-* [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).
-```
+	* [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).
 
 This would translate to the following HTML:
 
-```
-<h1>Virgina Federal Courts</h1>
-<h2>District</h2>
-<ul>
-<li><a href="https://ecf.vaed.uscourts.gov">U.S. District Court for the Eastern District of Virginia</a>,</li>
-<li><a href="https://ecf.vawd.uscourts.gov">U.S. District Court for the Western District of Virginia</a>, and</li>
-</ul>
-<h2>Circuit</h2>
-<ul>
-<li><a href="https://ecf.ca4.uscourts.gov">U.S. Court of Appeals for the Fourth Circuit</a>.</li>
-</ul>
-```
+	<h1>Virgina Federal Courts</h1>
+	<h2>District</h2>
+	<ul>
+	<li><a href="https://ecf.vaed.uscourts.gov">U.S. District Court for the Eastern District of Virginia</a>,</li>
+	<li><a href="https://ecf.vawd.uscourts.gov">U.S. District Court for the Western District of Virginia</a>, and</li>
+	</ul>
+	<h2>Circuit</h2>
+	<ul>
+	<li><a href="https://ecf.ca4.uscourts.gov">U.S. Court of Appeals for the Fourth Circuit</a>.</li>
+	</ul>
 
 Take note that HTML describes the heading as `<h1>` and `<h2>`. This is baked into HTML to show these as headings. Also take note that the District and Circuit lists are separate unordered lists, so the HTML must close the first `<ul>` tag before the Circuit heading is introduced. 
 
@@ -122,8 +114,8 @@ If you stopped here, you would be able to meaningfully build beautiful websites 
 
 [^1]: At some point, you should read the entire Markdown syntax documentation. It is very short, but covers a significant amount of ground. You should also know that there are many different "flavors" of Markdown. A flavor is a subtle variation of Markdown to provide specific features, such as footnotes. 
 
-[^X]: A URL?!
+[^2]: A URL?! 
 
-[^X]: If you don't know what ECF is, you are not a litigator.
+[^3]: If you don't know what ECF is, you are not a litigator.
 
-[^X]: Suppose you wanted to automatically determine the court based on the URL, you could write a regular expression to extract the court: `https:\/\/ecf\.(\w+)\.uscourts\.gov`.
+[^4]: Suppose you wanted to automatically determine the court based on the URL, you could write a regular expression to extract the court: `https:\/\/ecf\.(\w+)\.uscourts\.gov`.

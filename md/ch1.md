@@ -4,7 +4,7 @@ We begin our exploration of coding with **regular expressions**.[^1] Sometimes r
 
 # Regular Expressions
 
-Regex may be intuitive for many lawyers, particularly those who were on law review.[^2] That's because citations and regular expressions are actually closely related.[^3] For example, lawyers know what `5 U.S.C. § 552 (2006)` is. We also know that `552 U.S. 5 (2007)` is a different thing entirely. The former is a statute enacted by Congress and codified in the United States Code. The latter is a reported decision of the Supreme Court of the United States published in the bound volumes of the United States Reports. But, let's examine them closely.
+Regex may be intuitive for many lawyers, particularly those who were on law review.[^2] That's because citations and regular expressions are actually closely related. For example, lawyers know what `5 U.S.C. § 552 (2006)` is. We also know that `552 U.S. 5 (2007)` is a different thing entirely. The former is a statute enacted by Congress and codified in the United States Code. The latter is a reported decision of the Supreme Court of the United States published in the bound volumes of the United States Reports. But, let's examine them closely.
 
 A minimal citation to the United States Code has four main components: (1) the title of the United States Code; (2) "U.S. §"; (3) the specific section; and (4) the applicable date (though this is optional). Thus, we know that 42 U.S.C § 1983 is a valid citation to the United States Code, but U.S.C. § 42-1983 is not. Similarly, a minimal citation to the a bound volume of the United States Reports has three components: (1) the volume of the United States Reports; (2) "U.S."; (3) the starting page for the reported opinion; and (4) the applicable date (this is not optional).
 
@@ -26,7 +26,7 @@ Happily, regex has a "shorthand" way of representing any single digit: `\d`. As 
 
 You may be wondering why there is a backslash in the shorthand. This is a good, and important question. Regex accept literal characters: `d` is the letter "d", but `\d` is any integer between 0 and 9. In regex, the backslash has a special meaning and is called a "metacharacter". A backslash signals to regex that whatever comes next is something to pay attention to. Similarly, the plus sign that we used before (`\d+`) is a metacharacter. The plus sign signals to regex that you can repeat the preceding regex group. 
 
-In all, regex recognizes 12 metacharacters[^4], though describing all of them is beyond the scope of this chapter. For now, it is merely important to acknowledge that the period (`.`) and parentheses (`(` and `)`) are metacharacters too.[^5] The period (in regex, a "dot") can represent *any* character. A regex in a parentheses is called a "group." If we want to actually represent a metacharacter in the regex, we use a backslash to "escape" the metacharacter. In other words, if we want to use a period at the end of a sentence, we need to write `\.`, and if we want to use a backslash in our pattern, we need to write `\\`. 
+In all, regex recognizes 12 metacharacters[^4], though describing all of them is beyond the scope of this chapter. For now, it is merely important to acknowledge that the period (`.`) and parentheses (`(` and `)`) are metacharacters too. The period (in regex, a "dot") can represent *any* character. A regex in a parentheses is called a "group." If we want to actually represent a metacharacter in the regex, we use a backslash to "escape" the metacharacter. In other words, if we want to use a period at the end of a sentence, we need to write `\.`, and if we want to use a backslash in our pattern, we need to write `\\`. 
 
 By now, you already know a great deal about basic regex. For example, what if we wanted to represent "552a" or "2000aa"? We could do this by writing `\d+a+`. This would also match "1a" and "1234aaaa". And if wanted to do "2000bb", we could just change our regex to be as follows: `\d+[a-z]+`. This would represent "1z" and "12345abcde". Regex also allows for the shorthand `\w`, which represents any single alphanumeric character. *Any word* can be represented by `\w+`. So, you could simply write the regular expression as `\d+\w+`. Think of `\w` as the ultimate Scrabble piece. Potent stuff.
 
@@ -52,7 +52,7 @@ Congratulations. You have constructed a relatively complex regex! And there's mo
 
 2. Extend the regular expression to capture subsections and paragraphs.
 
-3. Write a regular expression to capture an email address.
+3. Write a regular expression to capture a simple email address.
 
 ***
 
