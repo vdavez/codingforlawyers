@@ -10,14 +10,14 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="/codingforlawyers/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
         <style>
 
         </style>
-        <link rel="stylesheet" href="/codingforlawyers/assets/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="/codingforlawyers/assets/css/main.css">
+        <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/assets/css/main.css">
 
-        <script src="/codingforlawyers/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -25,7 +25,7 @@
         <![endif]-->
     <div class="container">
     <div class="jumbotron">
-    <a href="/codingforlawyers"><h1>Coding For Lawyers</h1></a>
+    <a href=""><h1>Coding For Lawyers</h1></a>
     </div>
     <!-- Content goes here -->
 
@@ -38,9 +38,9 @@
       </footer>
     </div> <!-- /container -->        
 
-        <script src="/codingforlawyers/assets/js/vendor/jquery-1.11.0.min.js"></script>
-        <script src="/codingforlawyers/assets/js/vendor/bootstrap.min.js"></script>
-        <script src="/codingforlawyers/assets/js/main.js"></script>
+        <script src="/assets/js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="/assets/js/vendor/bootstrap.min.js"></script>
+        <script src="/assets/js/main.js"></script>
         <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
