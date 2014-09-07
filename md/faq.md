@@ -10,7 +10,7 @@ One thing that I discovered, when learning to code, is that there are surprising
 
 ## What can I do to help?
 
-At the moment, I am still making many decisions about this project, and I want your feedback. Is it worth it? Are any lawyers actually interested? Are the chapters too dense? Too easy? Are there topics that you definitely want covered? A great way to help would be to send me an email at dave@esq.io and let me know what you think. An even better way is to submit an issue on GitHub or submit a pull request.
+At the moment, I am still making many decisions about this project, and I want your feedback. Is it worth it? Are any lawyers actually interested? Are the chapters too dense? Too easy? Are there topics that you definitely want covered? A great way to help would be to send me an email at <dave@esq.io> and let me know what you think. An even better way is to [submit an issue on GitHub or submit a pull request](https://github.com/vzvenyach/codingforlawyers/issues).
 
 ## When will you finish?
 
