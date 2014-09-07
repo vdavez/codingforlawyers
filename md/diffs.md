@@ -69,7 +69,32 @@ Files README.md and NEW-README.md differ
 
 ## Diffs Rule Everything Around Me: Diffing the Law
 
-Now that you've gotten your feet wet with diffs, this section will demonstrate a practical application for lawyers in their everyday law practice: untangling complex regulations and understanding when and how they changed.
+Now that you've gotten your feet wet with diffs, this section will demonstrate practical applications for lawyers in their everyday law practice: 
+
+1. accessing court documents; and
+2. untangling complex regulations and understanding when and how they changed.
+
+### Court Documents
+
+Following the Snowden revelations, interest in the FISA court was increasing. Though much of the court operates in secrecy, some documents were being published on the court's [website](http://www.fisc.uscourts.gov/). Unfortunately, for a long time, the site lacked a meaningful notification mechanism. This meant lawyers (and anyone else) interested in the FISC needed to manually check the site for new documents to be posted. Not only is this time-consuming, but it is error-prone. 
+
+Around this time, [Eric Mill wrote software](https://twitter.com/FISACourt) that periodically checks the contents of the FISA court's website and, using diffs (thanks to a [code contribution from Ben Balter](https://github.com/konklone/fisacourt/pull/1)), detected the presence of new links to court filings.
+
+Mill [wrote](https://konklone.com/post/following-the-fisa-court-new-website-new-data):
+
+> The FISC's docket is a tiny piece of the action surrounding surveillance, but since the nation's only Court dedicated to surveillance first opened its ad hoc internet welcome mat in June of 2013, allowing the public a window into its work for the first time in 35 years, we've gotten to see:
+
+> ...
+
+> The Court declassifying and publishing a full justification for allowing bulk collection of phone metadata under the Fourth Amendment.
+
+> ...
+
+> The Court responding to inquiries from prominent senators by publicly describing its operations, and following up with numbers on how often they make the government revise their requests before granting them (~25% of the time).
+
+Though accessing these documents was certainly *possible* without diffs, diffs made such access much easier, more reliable, and more comprehensive.
+
+### Complex Regulations
 
 Let's say you need to understand what a given regulation currently is, and how it changed each time it was amended. Assuming you can access the plain text of various versions of a the Code of Federal Regulations (C.F.R.) (which you'll be able to do without trouble when you read our chapter on [Parsing XML]()), you can run `diff previous-version.txt current-version.txt`. As you might observe, running this command for each and every pair of different files can get tedious and reptitive. Thankfully, tools like git and GitHub make it easy to automatically generate histories of files (in this case, a file could represent a section of the C.F.R.). 
 
