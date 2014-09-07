@@ -143,6 +143,5 @@ There are a variety of free software tools out there that can assist you with qu
 * [Quick Diff Online Tool](http://www.quickdiff.com/)
 * [Superfastmatch](http://superfastmatch.org/)
 * [WinMerge](http://winmerge.org/)
-* [Xcode](https://developer.apple.com/xcode/) 
-
-* See also["25+ Useful Document and File Comparison Tools," noupe (26-11-2011)](http://www.noupe.com/tools/25-useful-document-and-file-comparison-tools.html)
+* [Xcode](https://developer.apple.com/xcode/)
+* See also ["25+ Useful Document and File Comparison Tools," noupe (26-11-2011)](http://www.noupe.com/tools/25-useful-document-and-file-comparison-tools.html)
