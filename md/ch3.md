@@ -73,3 +73,4 @@ The reason objects are special is that you can access the attributes in a powerf
 Throughout the rest of this book, we'll spend a lot of time manipulating these data types. Remember, they are just exhibits. The real power in coding is using these exhibits to make your case. In the next chapter, we'll take a closer look at arrays and write our first script.
 
 ## [Previous Chapter: Markdown and HTML](/chapters/ch2/)
+## [Next Chapter: Using Arrays](/chapters/ch4/)
