@@ -22,13 +22,17 @@ Encouraged by this success, you may be eager to skip over the "U.S. §" and go s
 
 Almost as soon as we start, though, there's a problem. We don't know how many sections there are in any given title. For a given title, there may be as few as 146 sections, like in Title 4 ("Flag And Seal, Seat Of Government, And The States"), or there may many more, even up to § 18445 in Title 42 ("The Public Health And Welfare"). And what if Congress adds a new section? Would we have to go back and change our regex everytime a law is passed?
 
-Happily, regex has a "shorthand" way of representing any single digit: `\d`. As a matter of semantics, then, `\d` shorthand is the same as `[0-9]`. If you repeat the shorthand (e.g., `\d\d`), you can represent any integer of a set number of digits. In other words, `\d\d` represents any two-digit number ([10-99]) and `\d\d\d` represents any three-digit number ([100-999]). And, importantly, you can even tell regex that you don't care *how many digits* using the plus sign (`+`). *Any positive integer* can be represented as follows: `\d+`.
+Happily, regex has a "shorthand" way of representing any single digit: `\d`. As a matter of semantics, then, `\d` shorthand is the same as `[0-9]`. If you repeat the shorthand (e.g., `\d\d`), you can represent any integer of a set number of digits. In other words, `\d\d` represents any two-digit number ([00-99]) and `\d\d\d` represents any three-digit number ([000-999]). And, importantly, you can even tell regex that you don't care *how many digits* using the plus sign (`+`). *Any positive integer* can be represented as follows: `\d+`.
 
 You may be wondering why there is a backslash in the shorthand. This is a good, and important question. Regex accept literal characters: `d` is the letter "d", but `\d` is any integer between 0 and 9. In regex, the backslash has a special meaning and is called a "metacharacter". A backslash signals to regex that whatever comes next is something to pay attention to. Similarly, the plus sign that we used before (`\d+`) is a metacharacter. The plus sign signals to regex that you can repeat the preceding regex group. 
 
-In all, regex recognizes 12 metacharacters[^4], though describing all of them is beyond the scope of this chapter. For now, it is merely important to acknowledge that the period (`.`) and parentheses (`(` and `)`) are metacharacters too. The period (in regex, a "dot") can represent *any* character. A regex in a parentheses is called a "group." If we want to actually represent a metacharacter in the regex, we use a backslash to "escape" the metacharacter. In other words, if we want to use a period at the end of a sentence, we need to write `\.`, and if we want to use a backslash in our pattern, we need to write `\\`. 
+In all, regex recognizes 12 metacharacters[^4], though describing all of them is beyond the scope of this chapter. For now, it is merely important to acknowledge that the period (`.`) and parentheses (`(` and `)`) are metacharacters too. 
 
-By now, you already know a great deal about basic regex. For example, what if we wanted to represent "552a" or "2000aa"? We could do this by writing `\d+a+`. This would also match "1a" and "1234aaaa". And if wanted to do "2000bb", we could just change our regex to be as follows: `\d+[a-z]+`. This would represent "1z" and "12345abcde". Regex also allows for the shorthand `\w`, which represents any single alphanumeric character. *Any word* can be represented by `\w+`. So, you could simply write the regular expression as `\d+\w+`. Think of `\w` as the ultimate Scrabble piece. Potent stuff.
+The period (in regex, a "dot") can represent *any* character. A regex in a parentheses is called a "group." If we want to actually represent a metacharacter in the regex, we use a backslash to "escape" the metacharacter. In other words, if we want to use a period at the end of a sentence, we need to write `\.`, and if we want to use a backslash in our pattern, we need to write `\\`. 
+
+By now, you already know a great deal about basic regex. For example, what if we wanted to represent "552a" or "2000aa"? We could do this by writing `\d+a+`. This would also match "1a" and "1234aaaa". And if wanted to do "2000bb", we could just change our regex to be as follows: `\d+[a-z]+`. This would represent "1z" and "12345abcde". 
+
+Regex also allows for the shorthand `\w`, which represents any single alphanumeric character. *Any word* can be represented by `\w+`. So, you could simply write the regular expression as `\d+\w+`. Think of `\w` as the ultimate Scrabble piece. Potent stuff.
 
 But, what if you wanted your pattern to match "552a" *and* "552". In other words, you don't *necessarily* want any letters to come after the numbers. To do this, the question mark metacharacter (`?`) comes into play. Here, you could simply write `552a?`, which means that the "a" is optional. By using parentheses for grouping, you can supercharge the use of the `?`. For example, you could write `(\d+)(\w+)?`, which would cover "552", "552a", and "2000bb". By grouping the repeating alphanumeric characters represented by `\w` and putting a question mark afterward, you can basically make all of the letters optional. 
 
@@ -48,7 +52,7 @@ Congratulations. You have constructed a relatively complex regex! And there's mo
 
 ## Homework
 
-1. Practice with a website: A few good examples are [rubular](http://www.rubular.com/) and the more feature-filled [regex 101](http://regex101.com/)
+1. Practice with a website: A few good examples are [rubular](http://www.rubular.com/) and the more feature-filled [regex 101](http://regex101.com/).
 
 2. Extend the regular expression to capture subsections and paragraphs.
 
