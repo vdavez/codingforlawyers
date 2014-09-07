@@ -66,3 +66,19 @@ Output:
 ```
 Files README.md and NEW-README.md differ
 ```
+
+## Diffs Rule Everything Around Me: Diffing the Law
+
+Now that you've gotten your feet wet with diffs, this section will demonstrate a practical application for lawyers in their everyday law practice: untangling complex regulations and understanding when and how they changed.
+
+Let's say you need to understand what a given regulation currently is, and how it changed each time it was amended. Assuming you can access the plain text of various versions of a the Code of Federal Regulations (C.F.R.) (which you'll be able to do without trouble when you read our chapter on [Parsing XML]()), you can run `diff previous-version.txt current-version.txt`. As you might observe, running this command for each and every pair of different files can get tedious and reptitive. Thankfully, tools like git and GitHub make it easy to automatically generate histories of files (in this case, a file could represent a section of the C.F.R.). 
+
+For example, the [adelevie/cfr-diffs](https://github.com/adelevie/cfr-diffs) GitHub repository shows the diffs of Title 47 of the C.F.R. going back several years. For example, this [page](https://github.com/adelevie/cfr-diffs/commits/master/cfr/title-47/20.19.md) displays the history of 47 C.F.R. § 20.19 (known as the Hearing Aid Compatibility Rules). Clicking on any of the revisions (known as "commits" in git-speak), shows the revisions for a given year. For example, you can easily see the changes to this regulation introduced in [2010](https://github.com/adelevie/cfr-diffs/commit/964e2272b95bbf7c2453839e3559be71ba0ae949). GitHub makes it even easier to view diffs of Markdown documents by displaying a "rich diff" ([example](https://github.com/adelevie/cfr-diffs/commit/964e2272b95bbf7c2453839e3559be71ba0ae949?short_path=5e27c6e#diff-5e27c6e509774e6358f3e291694f9a3f)). 
+
+In that example, changes that might have been difficult and time-consuming to detect with the naked eye were made obvious and prominent in the diff:
+
+![screenshot of GitHub's rich diff](http://i.imgur.com/WgGKp0p.png)
+
+To a lawyer working with the Hearing Aid Compatibility Rules, it's potentially very important that the 2010 revisions introduced a change that no longer applied the rules to a device that incorporates WiFi, but instead operates within a precise frequency range defined in a well-understood standard.
+
+
