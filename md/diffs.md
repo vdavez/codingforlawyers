@@ -106,4 +106,43 @@ In that example, changes that might have been difficult and time-consuming to de
 
 To a lawyer working with the Hearing Aid Compatibility Rules, it's potentially very important that the 2010 revisions introduced a change that no longer applied the rules to a device that incorporates WiFi, but instead operates within a precise frequency range defined in a well-understood standard.
 
+##More Diff Examples and Tools
 
+###Examples
+
+Including the examples mentioned above, here are examples of some legislative diffs to date to awe and inspire you. 
+
+* [@CongressEdits](https://twitter.com/congressedits), the [code](https://github.com/edsu/anon) has been [re-used around the world](https://github.com/edsu/anon#community)
+* [CFPB's e-regulations](http://www.consumerfinance.gov/eregulations/about) and [code](https://eregs.github.io/eregulations/)
+* [@FISACourt](https://twitter.com/FISACourt) and [code](https://github.com/konklone/fisacourt)
+* [GovTrack](https://www.govtrack.us/congress/bills/112/s1488/text)
+* [LobbyPlag](http://lobbyplag.eu/)
+* [ly.g0v.tw](http://ly.g0v.tw/bills/1150L15359#original-972)
+* [NY Capitol Camp's Bill Diff](https://github.com/nycapitolcamp/legislative-apps#Bill)
+* [The Making of a Law](http://visualisiert.net/parteiengesetz/index.en.html)
+* [@ScotusServo](https://twitter.com/SCOTUS_servo), and [code](https://github.com/vzvenyach/scotus-servo)
+
+###Tools
+
+There are a variety of free software tools out there that can assist you with quick out-of-box legislative diff comparisons, provide prototype examples, and technically inspire your diff creations.
+
+* [Code Compare](http://www.devart.com/codecompare/)
+* [DiffMerge](http://sourcegear.com/diffmerge/)
+* [DiffPDF](http://www.qtrac.eu/diffpdf.html)
+* [Diffuse](http://diffuse.sourceforge.net/)
+* [ExamDiff](http://www.prestosoft.com/edp_examdiff.asp)
+* [GitHub Diff function, example with a regulation:](https://github.com/adelevie/cfr-diffs/commit/bf2b3568273c12a94f4b40afe45ecf4093904636  )
+* [Juxta Commons](http://juxtacommons.org/shares/S7xr1e)
+* [KDiff3](http://kdiff3.sourceforge.net/)
+* [Meld](http://meldmerge.org/)
+* [NetBeans](https://netbeans.org/)
+* [Notepad++](http://notepad-plus-plus.org/)
+* [Online Code Difference Comparison Tool](http://www.tareeinternet.com/scripts/comparison-tool/)
+* [Pretty Diff](http://prettydiff.com/)
+* [PsPad](http://www.pspad.com/)
+* [Quick Diff Online Tool](http://www.quickdiff.com/)
+* [Superfastmatch](http://superfastmatch.org/)
+* [WinMerge](http://winmerge.org/)
+* [Xcode](https://developer.apple.com/xcode/) 
+
+* See also["25+ Useful Document and File Comparison Tools," noupe (26-11-2011)](http://www.noupe.com/tools/25-useful-document-and-file-comparison-tools.html)
