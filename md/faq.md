@@ -2,11 +2,18 @@
 
 ## What? Lawyers and Coding?
 
-It's true. Lawyers *can* code. In fact, if you're a lawyer, the truth is that it's easier than you think. I am a lawyer, and a coder.[^1] And, in the course of two years, I have gone from knowing essentially nothing to being a decent coder, in several languages. This book is intended to shorten that time dramatically for others, who like me decide that they want to learn to code.
+It's true. Lawyers *can* code. In fact, if you're a lawyer, the truth is that it's easier than you think. I am a lawyer, and a coder.[^1] In the course of two years, I have gone from knowing essentially *nothing* to being a decent coder in several languages. This book is intended to drastically shorten that time for others who, like me, decide that they want to learn to code.
 
 ## Why this book?
 
-One thing that I discovered, when learning to code, is that there are surprisingly few freely available books on the *basics* of coding, books that assume you know *nothing* about coding, books that assume you went to law school because you didn't like numbers.[^2]
+One thing that I discovered, when learning to code, is that there are surprisingly few freely available books on the *basics* of coding, books that assume you know *nothing* about coding, books that assume you went to law school because you didn't like numbers.[^2] And, we need more lawyers who code. 
+
+<div class="text-center">
+<iframe id="Sandman Lecture" frameborder="0" allowfullscreen="" style="width:450px;height:275px;" src="https://suensemble.suffolk.edu/app/plugin/embed.aspx?ID=haHIpy_nR0CaMJomLUGlpg&displayTitle=false&startTime=0&autoPlay=false&hideControls=false&showCaptions=false&width=450&height=254&displaySharing=false"></iframe>
+
+<p><http://www.abajournal.com/news/article/lawyers_and_developers_take_part_in_inaugural_hackcess_to_justice_legal_hac/></p>
+
+</div>
 
 ## What can I do to help?
 
@@ -14,7 +21,7 @@ At the moment, I am still making many decisions about this project, and I want y
 
 ## When will you finish?
 
-This is obviously still a work-in-progress. I expect that it will take me a few months to get it into `1.0` shape. Obviously, if there's a large demand, I'll prioritize it accordingly. So, please send feedback.
+This is obviously still a work-in-progress. I expect that it will take me a few months to get it into `1.0` shape. If there's a large demand, I'll prioritize it accordingly. So, please send feedback.
 
 ## No banner ads? No fee?
 
