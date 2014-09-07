@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Coding for Lawyers</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <style>
+
+        </style>
+        <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/assets/css/main.css">
+
+        <script src="/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="container">
+    <div class="jumbotron">
+    <a href="/faq.html"><button type="button" class="btn btn-default btn-lg pull-right"><span class="glyphicon glyphicon-question-sign"></span> FAQ</button></a>
+    <a href="/"><h1>Coding For Lawyers</h1></a>
+    </div>
+    <a class="pull-right" href="https://github.com/vzvenyach/codingforlawyers/tree/gh-pages/md/ch4.md">Edit this Page</a>
+    <!-- Content goes here -->
+
+    <h1 id="chapter-4-using-arrays">Chapter 4: Using Arrays</h1>
+<p>In the last chapter, we described the following array, which we&#39;ll define as &quot;justices&quot;:</p>
+<p><code>justices = [&quot;Roberts&quot;,&quot;Scalia&quot;,&quot;Kennedy&quot;,&quot;Thomas&quot;,&quot;Ginsburg&quot;,&quot;Breyer&quot;,&quot;Alito&quot;,&quot;Sotomayor&quot;,&quot;Kagan&quot;]</code></p>
+<p>Let&#39;s try a few things in python.<sup><a href="#fn_1" id="reffn_1">1</a></sup> </p>
+<h2 id="getting-started-with-arrays">Getting Started with Arrays</h2>
+<p>Click the &quot;run&quot; button below:</p>
+<iframe src="https://trinket.io/embed/python/7a7ce0b98f" width="100%" height="150" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+<p>What did we do here? Let&#39;s examine line by line:</p>
+<ol>
+<li>On line #2, we defined the variable &quot;justices&quot;. This is old hat by now.</li>
+<li>On line #5, we use python&#39;s <code>print</code> command to &quot;print to console&quot;. This means that the <em>result</em> of the command (here, <code>print justices</code>) is displayed on the command line (result: the justices array).</li>
+<li>On line #8, we printed the &quot;length&quot; of the array (how many items are in the array) to the console (result: 9 justices in the array) by using the <code>len</code> function.</li>
+</ol>
+<p>You&#39;ll note that on lines 1, 4, and 7, we have a little <code>#</code> symbol at the beginning of the line. This is a way of telling the program that everything after it is a &quot;comment&quot;. Think of this as a &quot;note to self&quot; (or, more generously, a note to anyone else reading the source code.<sup><a href="#fn_2" id="reffn_2">2</a></sup>)</p>
+<h2 id="numbering-types-and-arrays">Numbering, Types, and Arrays</h2>
+<p>Now, let&#39;s try something a little different:</p>
+<iframe src="https://trinket.io/embed/python/6c699324b4" width="100%" height="150" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+<p>What&#39;s going on here? On line #5, we printed something to the command line. But we did two very interesting things. First, we combined two strings (remember <a href="/chapters/ch4/index.html#exhibit-1-strings">strings</a>? ) Second, we accessed the first string in the justices array.</p>
+<p>To access the first &quot;index&quot; in the justices array (that&#39;s the first thing in the array), we called <code>justices[0]</code>, not <code>justices[1]</code>. This convention of referring to the first number by &quot;zero&quot; instead of &quot;one&quot; is called <a href="http://en.wikipedia.org/wiki/Zero-based_numbering">&quot;zero-based numbering&quot;</a>. If you think this convention is odd, that&#39;s ok. But it&#39;s a &quot;super-precedent&quot;<sup><a href="#fn_3" id="reffn_3">3</a></sup> entitled to <a href="http://www.law.cornell.edu/wex/stare_decisis"><em>stare decisis</em></a>, so you need to know it exists.</p>
+<p>Now, getting back to the script above, on line #8, we took advantage of the <code>len</code>  function to find the most junior justice. There are 9 justices, so <code>len(justices)</code> is 9, but the last index in <code>justices</code> is 8, not 9 (if this is confusing, re-read the immediately preceding paragraph). So, the most junior justice is accessed by <code>justices[len(justices) - 1]</code>. </p>
+<p>In line # 11, we did something really strange. We wrote <code>str(len(justices))</code>. Why did we do that? Well, it is because some languages don&#39;t let you mix data types. A string can be added to another string. An integer may be substracted from another string. But an integer may not be combined to two other strings. So, we used the <code>str</code> function to convert <code>len(justices)</code> from an integer, 9, to a string, &quot;9&quot;.</p>
+<h2 id="a-nested-array-and-a-loop-">A nested array and a loop?</h2>
+<p>Now let&#39;s do one last exercise with arrays, and this one will take a few minutes but will propel you to the next level of coding. So prepare yourself and soak it in:</p>
+<iframe src="https://trinket.io/embed/python/e9d432984e" width="100%" height="550" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+<p>Ok. Let&#39;s take this slowly. What&#39;s happening? First, we are defining an array: <code>courts</code>. It has three items within the array, themselves arrays. These three arrays should look familiar, as they represent the federal courts in Virginia. This is called using &quot;nested&quot; arrays. They&#39;re like <a href="http://en.wikipedia.org/wiki/Matryoshka_doll">&quot;Matryoshka dolls&quot;</a>, with an array in an array. More on that subject in a later chapter.</p>
+<p>So, now, on line #9, we defined an &quot;iterator&quot;. This is a very common convention<sup><a href="#fn_4" id="reffn_4">4</a></sup> in computer science. You&#39;ll need it when you reach line numbers 15 through 24. For now, just know that you&#39;ve defined an integer.</p>
+<p>Line #12 is a simple print command. Cake.</p>
+<p>Line #15. This is big. This is a <code>for loop</code>, and it is a window into the powerful world of code. It essentially goes item by item in the <code>courts</code> array and does something with it. </p>
+<p>In python, the syntax is actually intended to reflect how people actually speak. You can imagine someone saying: &quot;For every federal court in Virginia.&quot; Well, in line #15, we did that by writing <code>for court in courts:</code>.<sup><a href="#fn_5" id="reffn_5">5</a></sup> </p>
+<p>Hopefully, the comments in lines 17 through 20 explain what is happening. Essentially, you are adding the strings together<sup><a href="#fn_6" id="reffn_6">6</a></sup> in a way that will ultimately resemble the Markdown syntax we saw in <a href="/chapters/ch2/">chapter 2</a>. And, we are accessing the values from the nested arrays by calling their index: the court name as <code>court[0]</code> and the court&#39;s ECF designation as <code>court[1]</code>.</p>
+<p>Finally, we &quot;step through&quot; the iterator one-by-one.</p>
+<p>In the end, you have a Markdown-ready result of the Virginia federal courts. This is huge progress. Congratulations on making it this far!</p>
+<hr>
+<p><sup><a href="#fn_1" id="reffn_1">1</a></sup> In addition to python, there are several other languages we&#39;ll cover in the course of this book. I chose python for this chapter because its basic syntax is forgiving. </p>
+<p><sup><a href="#fn_2" id="reffn_2">2</a></sup> I strongly encourage you to (1) get in the habit of over-commenting, and (2) share your code. It&#39;s the best way to learn honestly. A great place to share your code is <a href="http://github.com">github</a>. I&#39;ll go into github in greater length in the coming chapters. But if you&#39;re inclined, go <a href="https://guides.github.com">check out the github guides</a>.</p>
+<p><sup><a href="#fn_3" id="reffn_3">3</a></sup> William Landes &amp; Richard Posner, <em>Legal Precedent: A Theoretical and Empirical Analysis</em>, 19 J. L. &amp; Econ. 249, 251 (1976).</p>
+<p><sup><a href="#fn_4" id="reffn_4">4</a></sup> Programmers refer to this sort of typical convention as a &quot;design pattern.&quot; In a way, a design pattern is like boilerplate for computers. Sometimes, you don&#39;t know exactly what sort of indemnification provision you want to put in the contract, but you know you need an indemnification provision. Similarly, when coding, you just know you need to &quot;iterate&quot; through a loop. Like law, this intuition is developed through practice and reading other examples of good work.</p>
+<p><sup><a href="#fn_5" id="reffn_5">5</a></sup> One thing to realize is that the use of <code>court</code> is arbitrary. It could just as well by <code>for c in courts:</code> or <code>for article3court in courts</code>. The use of <code>courts</code> is not arbitrary; we previously defined <code>courts</code> as the nested array.</p>
+<p><sup><a href="#fn_6" id="reffn_6">6</a></sup> Note that we write <code>str(i)</code>. That is because <code>i</code> is an integer, and we learned above that you cannot combine strings and integers, so we are converting <code>i</code> to be <code>&quot;i&quot;</code> for purposes of the print command.</p>
+
+    
+      <hr>
+
+      <footer>
+        <p>&copy; V. David Zvenyach (dave@esq.io) 2014</p>
+      </footer>
+    </div> <!-- /container -->        
+
+        <script src="/assets/js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="/assets/js/vendor/bootstrap.min.js"></script>
+        <script src="/assets/js/main.js"></script>
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46841105-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    </body>
+</html>
