@@ -110,12 +110,19 @@ Getting to fully understand HTML, on the other hand, can be much more involved. 
 
 If you stopped here, you would be able to meaningfully build beautiful websites using Markdown. But you won't stop here, because it keeps gets better...
 
+## [Previous Chapter: Regular Expressions](/chapters/ch1/)
+
+## [Next Chapter: Data Types](/chapters/ch3/)
+
+
 ***
 
-[^1]: At some point, you should read the entire Markdown syntax documentation. It is very short, but covers a significant amount of ground. You should also know that there are many different "flavors" of Markdown. A flavor is a subtle variation of Markdown to provide specific features, such as footnotes. 
+## Endnotes 
 
-[^2]: A URL?! 
+[^1] At some point, you should read the entire Markdown syntax documentation. It is very short, but covers a significant amount of ground. You should also know that there are many different "flavors" of Markdown. A flavor is a subtle variation of Markdown to provide specific features, such as footnotes. 
 
-[^3]: If you don't know what ECF is, you are not a litigator.
+[^2] A URL?! 
 
-[^4]: Suppose you wanted to automatically determine the court based on the URL, you could write a regular expression to extract the court: `https:\/\/ecf\.(\w+)\.uscourts\.gov`.
+[^3] If you don't know what ECF is, you are not a litigator.
+
+[^4] Suppose you wanted to automatically determine the court based on the URL, you could write a regular expression to extract the court: `https:\/\/ecf\.(\w+)\.uscourts\.gov`.

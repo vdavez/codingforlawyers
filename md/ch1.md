@@ -54,16 +54,20 @@ Congratulations. You have constructed a relatively complex regex! And there's mo
 
 3. Write a regular expression to capture a simple email address.
 
+## [Next Chapter: Markdown and HTML](/chapters/ch2/)
+
 ***
 
-[^1]: Many programmers would, I suspect, suggest that this is a strange place to begin. They would argue that it is not really even *coding*. It is my view that this is a proper subject for a beginning chapter. *Cf.* *Brown v. Allen*, 344 U.S. 443, 540 (1953) (Jackson, J., concurring) ("There is no doubt that if there were a super-Supreme Court, a substantial proportion of our reversals of state courts would also be reversed. We are not final because we are infallible, but we are infallible only because we are final."). Plus, by the time you are done with this chapter, you can impress your coding friends that you know basic "regex". A word of caution, the universe of non-coders who will be impressed your knowledge of regex is rather small. 
+## Endnotes 
 
-[^2]: A quick review of my curriculm vitae demonstrates that I was not on law review in law school. I am using many footnotes to compensate.
+[^1] Many programmers would, I suspect, suggest that this is a strange place to begin. They would argue that it is not really even *coding*. It is my view that this is a proper subject for a beginning chapter. *Cf.* *Brown v. Allen*, 344 U.S. 443, 540 (1953) (Jackson, J., concurring) ("There is no doubt that if there were a super-Supreme Court, a substantial proportion of our reversals of state courts would also be reversed. We are not final because we are infallible, but we are infallible only because we are final."). Plus, by the time you are done with this chapter, you can impress your coding friends that you know basic "regex". A word of caution, the universe of non-coders who will be impressed your knowledge of regex is rather small. 
 
-[^3]: Editorial Reclassification, Title 52, United States Code, *available online at* [http://uscode.house.gov/editorialreclassification/t52/index.html](http://uscode.house.gov/editorialreclassification/t52/index.html).
+[^2] A quick review of my curriculm vitae demonstrates that I was not on law review in law school. I am using many footnotes to compensate.
 
-[^4]: List of all twelve metacharacters. "the backslash \, the caret ^, the dollar sign $, the period or dot ., the vertical bar or pipe symbol |, the question mark ?, the asterisk or star *, the plus sign +, the opening parenthesis (, the closing parenthesis ), the opening square bracket [, and the opening curly brace {." Source: http://www.regular-expressions.info/quickstart.html
+[^3] Editorial Reclassification, Title 52, United States Code, *available online at* [http://uscode.house.gov/editorialreclassification/t52/index.html](http://uscode.house.gov/editorialreclassification/t52/index.html).
 
-[^5]: A different, and more typical, way of writing this would be to use the asterisk `*` metacharacter. Using `*` matches whatever precedes it zero or more times. Accordingly, `.*` matches "a" or "abc123" or even nothing at all. Ultimately, then, the pattern `\d+(\w+)?` could also have been written as `\d+\w*`.
+[^4] List of all twelve metacharacters. "the backslash \, the caret ^, the dollar sign $, the period or dot ., the vertical bar or pipe symbol |, the question mark ?, the asterisk or star *, the plus sign +, the opening parenthesis (, the closing parenthesis ), the opening square bracket [, and the opening curly brace {." Source: http://www.regular-expressions.info/quickstart.html
 
-[^6]: There are multiple candidates for representing the date. Another might be `\d\d\d\d`. An advanced regex user might use `([0-9]{4}`, which means any four-digit number. I took the license to demonstrate that you can mix and match.
+[^5] A different, and more typical, way of writing this would be to use the asterisk `*` metacharacter. Using `*` matches whatever precedes it zero or more times. Accordingly, `.*` matches "a" or "abc123" or even nothing at all. Ultimately, then, the pattern `\d+(\w+)?` could also have been written as `\d+\w*`.
+
+[^6] There are multiple candidates for representing the date. Another might be `\d\d\d\d`. An advanced regex user might use `([0-9]{4}`, which means any four-digit number. I took the license to demonstrate that you can mix and match.
