@@ -1,12 +1,14 @@
 # Chapter ???: Diffs
 
-Diffs express the difference between two files. Originally designed to track the changes made between different versions of software files, they are increasingly powerful in non-software applications. Diffs make changes to a document obvious and easy for humans to look at.
+Diffs express the difference between two files. Originally designed to track the changes made between different versions of software files, they are increasingly powerful in non-software applications. 
 
 You might be familiar with the "track changes" of your favorite word processor where deletions have a line strike-through and insertions are underlined:
 
 ![screenshot of track changes in a word processor](http://i.imgur.com/wwRfTjb.png)
 
-## Exercise 1 (OSX)
+Like "track changes", diffs make changes to a document obvious and easy for humans to look at. However, unlike "track changes", diffs make it easy for software programs to automatically detect and analyze changes to documents. For example, the Twitter bot, [CongressEdits](https://twitter.com/congressedits), automatically published edits ([example](http://en.wikipedia.org/w/index.php?diff=623325721&oldid=623325294)) made to Wikipedia by computers in Congressional offices. The [code](https://github.com/edsu/anon) behind CongressEdits, because it is open source, has been forked (copied) and modified many times over for [use in other contexts](https://github.com/edsu/anon#community) all over the world. 
+
+## Exercise (OSX)
 
 Create a file called `README.md`. Add some text to the file, such as:
 
@@ -56,3 +58,5 @@ Output:
 ```
 Files README.md and NEW-README.md differ
 ```
+
+<hr/>
