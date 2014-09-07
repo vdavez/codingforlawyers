@@ -72,7 +72,7 @@ Arrays are, in many respects, seductively simple. They are lists: no more, no le
 
 [^4] Programmers refer to this sort of typical convention as a "design pattern." In a way, a design pattern is like boilerplate for computers. Sometimes, you don't know exactly what sort of indemnification provision you want to put in the contract, but you know you need an indemnification provision. Similarly, when coding, you just know you need to "iterate" through a loop. Like law, this intuition is developed through practice and reading other examples of good work.
 
-[^5] One thing to realize is that the use of `court` is arbitrary. It could just as well by `for c in courts:` or `for article3court in courts`. The use of `courts` is not arbitrary; we previously defined `courts` as the nested array.
+[^5] One thing to realize is that the use of `court` is arbitrary. It could just as well by `for c in courts:` or `for article3court in courts:`. The use of `courts` is not arbitrary; we previously defined `courts` as the nested array.
 
 [^6] Note that we write `str(i)`. That is because `i` is an integer, and we learned above that you cannot combine strings and integers, so we are converting `i` to be `"i"` for purposes of the print command.
 

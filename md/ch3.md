@@ -16,7 +16,7 @@ Integers are just what you'd expect them to be. They are whole numbers, positive
 
 ## Exhibit 3: Floats
 
-Just a moment ago, when looking at integers Exhibit 2, we observed that `1.5` is not an integer. Instead, it is considered to be a "float", because it has a  "floating decimal". The following are all examples of floats: `3.14`, `2.1828`, and `0.0001`.
+Just a moment ago, when looking at integers Exhibit 2, we observed that `1.5` is not an integer. Instead, it is considered to be a "float", because it has a  "floating decimal". The following are all examples of floats: `3.14`, `2.1828`, and `0.0001`. As one reader ([@jeremybowers](https://twitter.com/jeremybowers)) observed, recording a billable hour can often involve a float: `0.1` of a billable hour corresponds to 6 minutes. 
 
 ## Exhibit 4: Booleans
 
