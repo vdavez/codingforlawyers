@@ -38,7 +38,7 @@ Couldn't be simpler, right? Ok, sidebar over.
 
 An array, despite its total simplicity, is a surprisingly powerful data type. An array is a list of data. That's it.  Here's an example of an array:
 
-`["Roberts","Kennedy","Scalia","Thomas","Ginsburg","Kagan","Sotomayor","Alito","Breyer"]`
+`["Roberts","Scalia","Kennedy","Thomas","Ginsburg","Breyer","Alito","Sotomayor","Kagan"]`
 
 Piece of cake? Good.
 
@@ -62,7 +62,7 @@ This is an object. It uses "keys" and "values" to describe attributes of the obj
 ```
 scotus = {
 	"name": "Supreme Court of the United States",
-	"justices": ["Roberts","Kennedy","Scalia","Thomas","Ginsburg","Kagan","Sotomayor","Alito","Breyer"]
+	"justices": ["Roberts","Scalia","Kennedy","Thomas","Ginsburg","Breyer","Alito","Sotomayor","Kagan"]
 }
 ```
 
@@ -73,3 +73,4 @@ The reason objects are special is that you can access the attributes in a powerf
 Throughout the rest of this book, we'll spend a lot of time manipulating these data types. Remember, they are just exhibits. The real power in coding is using these exhibits to make your case. In the next chapter, we'll take a closer look at arrays and write our first script.
 
 ## [Previous Chapter: Markdown and HTML](/chapters/ch2/)
+## [Next Chapter: Using Arrays](/chapters/ch4/)
