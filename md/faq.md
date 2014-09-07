@@ -23,9 +23,17 @@ At the moment, I am still making many decisions about this project, and I want y
 
 This is obviously still a work-in-progress. I expect that it will take me a few months to get it into `1.0` shape. If there's a large demand, I'll prioritize it accordingly. So, please send feedback.
 
+## How can I stay current on latest developments?
+
+You can sign up for my mailing list: <https://tinyletter.com/codingforlawyers>. I promise not to use your information for any purpose other than to update you about this book. I will not knowingly share your email or any other personal information with any other person.
+
 ## No banner ads? No fee?
 
 No. Inspired by [Matthew Butterick's Practical Typography](http://practicaltypography.com), it is my plan to offer this as a free ebook. But, if you feel compelled to contribute, I have set up a [Dwolla Hub](https://www.dwolla.com/hub/esqio). No amount over $50 will be accepted and, due to ethical restrictions associated with my day job, if you happen to do business with the District of Columbia government, do not make any contributions. 
+
+## Is this book legal advice?
+
+Obviously not. Don't be ridiculous.
 
 ***
 
