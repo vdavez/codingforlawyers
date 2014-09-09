@@ -14,9 +14,9 @@ Regex allows us to assemble patterns so that a computer could recognize these pa
 
 ## The building blocks of regex
 
-We know that as of September 1, 2014, there are 52 titles of the United States Code.[^3] We can therefore represent the first component of a citation to the United States Code as `[1-52]`. Note the brackets here. This means that any integer between 1 and 52 will be considered *valid* regex. So, "18" will be considered valid, but "58" will be rejected as invalid. We have just written our first regex. Great work!
+We know that as of September 1, 2014, there are 52 titles of the United States Code.[^3] That means we can represent the first component of a citation with *either* a one-digit number (e.g., "8") or a two-digit number ("18"). In regex, we can represent any single digit as `[0-9]`. That means that regex will match any number between 0 and 9. What about *two* digits? Well, we could write `[0-9][0-9]` and that would capture `15` and `25`. Unfortunately, though, would reject `8` because `8` only has one digit.
 
-`[1-52]` 
+Happily, regex lets you *choose* how many digits you want by using curly braces `{ }`. That's a great aspect of regex: we have a lot of control over what we're looking for. We can tell regex that we want it to be either a one or two digit number as follows: `[0-9]{1,2}`. We could just as easily say we want a three-digit number: `[0-9]{1,3}`.[^4] So, with `[0-9]{1,2}`, we can represent either a one-digit number or a two-digit number. That means we can write `5` or `28` or `51`, and the pattern will match *any* of them. This means that any title of the United States Code will captured.[^5] We have just written our first regex: `[0-9]{1,2}`. Great work!
 
 Encouraged by this success, you may be eager to skip over the "U.S. §" and go straight to the specific section itself, since we now know how to represent numbers! Let's indulge this zeal.
 
@@ -26,7 +26,7 @@ Happily, regex has a "shorthand" way of representing any single digit: `\d`. As 
 
 You may be wondering why there is a backslash in the shorthand. This is a good, and important question. Regex accept literal characters: `d` is the letter "d", but `\d` is any integer between 0 and 9. In regex, the backslash has a special meaning and is called a "metacharacter". A backslash signals to regex that whatever comes next is something to pay attention to. Similarly, the plus sign that we used before (`\d+`) is a metacharacter. The plus sign signals to regex that you can repeat the preceding regex group. 
 
-In all, regex recognizes 12 metacharacters[^4], though describing all of them is beyond the scope of this chapter. For now, it is merely important to acknowledge that the period (`.`) and parentheses (`(` and `)`) are metacharacters too. 
+In all, regex recognizes 12 metacharacters[^6], though describing all of them is beyond the scope of this chapter. For now, it is merely important to acknowledge that the period (`.`) and parentheses (`(` and `)`) are metacharacters too. 
 
 The period (in regex, a "dot") can represent *any* character. A regex in a parentheses is called a "group." If we want to actually represent a metacharacter in the regex, we use a backslash to "escape" the metacharacter. In other words, if we want to use a period at the end of a sentence, we need to write `\.`, and if we want to use a backslash in our pattern, we need to write `\\`. 
 
@@ -42,7 +42,7 @@ Believe it or not, we know everything to represent the minimal citation to a sec
 
 <DIAGRAM OF U.S.C. CITATION>
 
-First, there is the title: `[1-52]`. Second there is the "U.S.C. §", which requires some escaping of the periods but is written as follows: `U\.S\.C\. §`. Third, there is the section: `\d+(\w+)?`.[^5] And finally, there is the date: `\([19-20]\d\d\)`[^6]. As a reminder for the date, before we put it all together: the date is optional.
+First, there is the title: `[1-52]`. Second there is the "U.S.C. §", which requires some escaping of the periods but is written as follows: `U\.S\.C\. §`. Third, there is the section: `\d+(\w+)?`.[^7] And finally, there is the date: `\([19-20]\d\d\)`[^8]. As a reminder for the date, before we put it all together: the date is optional.
 
 Now, let's put together the citation:
 
@@ -70,8 +70,12 @@ Congratulations. You have constructed a relatively complex regex! And there's mo
 
 [^3] Editorial Reclassification, Title 52, United States Code, *available online at* [http://uscode.house.gov/editorialreclassification/t52/index.html](http://uscode.house.gov/editorialreclassification/t52/index.html).
 
-[^4] List of all twelve metacharacters. "the backslash \, the caret ^, the dollar sign $, the period or dot ., the vertical bar or pipe symbol |, the question mark ?, the asterisk or star *, the plus sign +, the opening parenthesis (, the closing parenthesis ), the opening square bracket [, and the opening curly brace {." Source: http://www.regular-expressions.info/quickstart.html
+[^4] If you're so inclined, you can even tell regex to match any four-letter word: `[a-zA-Z]{4}`.
 
-[^5] A different, and more typical, way of writing this would be to use the asterisk `*` metacharacter. Using `*` matches whatever precedes it zero or more times. Accordingly, `.*` matches "a" or "abc123" or even nothing at all. Ultimately, then, the pattern `\d+(\w+)?` could also have been written as `\d+\w*`.
+[^5] Admittedly, it would capture `99` too, but let's not let the perfect be the enemy of the good. See what I mean about the footnotes? *See supra* n. 2.
 
-[^6] There are multiple candidates for representing the date. Another might be `\d\d\d\d`. An advanced regex user might use `([0-9]{4}`, which means any four-digit number. I took the license to demonstrate that you can mix and match.
+[^6] List of all twelve metacharacters. "the backslash \, the caret ^, the dollar sign $, the period or dot ., the vertical bar or pipe symbol |, the question mark ?, the asterisk or star *, the plus sign +, the opening parenthesis (, the closing parenthesis ), the opening square bracket [, and the opening curly brace {." Source: http://www.regular-expressions.info/quickstart.html
+
+[^7] A different, and more typical, way of writing this would be to use the asterisk `*` metacharacter. Using `*` matches whatever precedes it zero or more times. Accordingly, `.*` matches "a" or "abc123" or even nothing at all. Ultimately, then, the pattern `\d+(\w+)?` could also have been written as `\d+\w*`.
+
+[^8] There are multiple candidates for representing the date. Another might be `\d\d\d\d`. An advanced regex user might use `([0-9]{4}`, which means any four-digit number. I took the license to demonstrate that you can mix and match.
