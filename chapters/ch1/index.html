@@ -57,9 +57,9 @@
 <p>Believe it or not, we know everything to represent the minimal citation to a section in the United States Code (and even more complicated ones!). Let&#39;s return to the 4 minimum components of the citation:</p>
 <DIAGRAM OF U.S.C. CITATION>
 
-<p>First, there is the title: <code>[1-52]</code>. Second there is the &quot;U.S.C. §&quot;, which requires some escaping of the periods but is written as follows: <code>U\.S\.C\. §</code>. Third, there is the section: <code>\d+(\w+)?</code>.<sup><a href="#fn_7" id="reffn_7">7</a></sup> And finally, there is the date: <code>\([19-20]\d\d\)</code><sup><a href="#fn_8" id="reffn_8">8</a></sup>. As a reminder for the date, before we put it all together: the date is optional.</p>
+<p>First, there is the title: <code>[0-9]{1,2}</code>. Second there is the &quot;U.S.C. §&quot;, which requires some escaping of the periods but is written as follows: <code>U\.S\.C\. §</code>. Third, there is the section: <code>\d+(\w+)?</code>.<sup><a href="#fn_7" id="reffn_7">7</a></sup> And finally, there is the date: <code>[0-9]{1,2}</code><sup><a href="#fn_8" id="reffn_8">8</a></sup>. As a reminder for the date, before we put it all together: the date is optional.</p>
 <p>Now, let&#39;s put together the citation:</p>
-<p><code>[1-52] U\.S\.\C. § \d+(\w+)?( \([19-20]\d\d\))?</code></p>
+<p><code>[0-9]{1,2} U\.S\.\C. § \d+(\w+)?( \([0-9]{4}\))?</code></p>
 <p>Congratulations. You have constructed a relatively complex regex! And there&#39;s more good news, the road gets easier from here.</p>
 <h2 id="homework">Homework</h2>
 <ol>
@@ -80,7 +80,7 @@
 <p><sup><a href="#fn_5" id="reffn_5">5</a></sup> Admittedly, it would capture <code>99</code> too, but let&#39;s not let the perfect be the enemy of the good. See what I mean about the footnotes? <em>See supra</em> n. 2.</p>
 <p><sup><a href="#fn_6" id="reffn_6">6</a></sup> List of all twelve metacharacters. &quot;the backslash \, the caret ^, the dollar sign $, the period or dot ., the vertical bar or pipe symbol |, the question mark ?, the asterisk or star *, the plus sign +, the opening parenthesis (, the closing parenthesis ), the opening square bracket [, and the opening curly brace {.&quot; Source: http://www.regular-expressions.info/quickstart.html</p>
 <p><sup><a href="#fn_7" id="reffn_7">7</a></sup> A different, and more typical, way of writing this would be to use the asterisk <code>*</code> metacharacter. Using <code>*</code> matches whatever precedes it zero or more times. Accordingly, <code>.*</code> matches &quot;a&quot; or &quot;abc123&quot; or even nothing at all. Ultimately, then, the pattern <code>\d+(\w+)?</code> could also have been written as <code>\d+\w*</code>.</p>
-<p><sup><a href="#fn_8" id="reffn_8">8</a></sup> There are multiple candidates for representing the date. Another might be <code>\d\d\d\d</code>. An advanced regex user might use <code>([0-9]{4}</code>, which means any four-digit number. I took the license to demonstrate that you can mix and match.</p>
+<p><sup><a href="#fn_8" id="reffn_8">8</a></sup> There are multiple candidates for representing the date. Another might be <code>\d\d\d\d</code> or <code>\d{4}</code>. I took the license to demonstrate that you can mix and match.</p>
 
     
       <hr>

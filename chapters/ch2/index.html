@@ -64,12 +64,13 @@
 2. [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
 3. [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).
 </code></pre><p>As it turns out, this is also all you need to do to write a numbered list in Markdown. If you converted the Markdown into HTML, it would appear as follows:</p>
-<pre><code>&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;https://ecf.vaed.uscourts.gov&quot;&gt;U.S. District Court for the Eastern District of Virginia&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://ecf.vawd.uscourts.gov&quot;&gt;U.S. District Court for the Eastern District of Virginia&lt;/a&gt;, and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://ecf.ca4.uscourts.gov&quot;&gt;U.S. Court of Appeals for the Fourth Circuit&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-</code></pre><p>You can see that this has more complexity. Let&#39;s unpack it a bit. The top tag is <code>&lt;ol&gt;</code>, which stands for &quot;ordered list.&quot; An ordered list is numbered (more accurately, the order in the list matters). Then, within the <code>&lt;ol&gt;</code> tag there is an <code>&lt;li&gt;</code> tag. This is a &quot;list item.&quot; You&#39;re already familiar with the <code>&lt;a&gt;</code> tag and the href attribute.</p>
+<p><code>html
+    &lt;ol&gt;
+    &lt;li&gt;&lt;a href=&quot;https://ecf.vaed.uscourts.gov&quot;&gt;U.S. District Court for the Eastern District of Virginia&lt;/a&gt;,&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://ecf.vawd.uscourts.gov&quot;&gt;U.S. District Court for the Eastern District of Virginia&lt;/a&gt;, and&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://ecf.ca4.uscourts.gov&quot;&gt;U.S. Court of Appeals for the Fourth Circuit&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ol&gt;</code></p>
+<p>You can see that this has more complexity. Let&#39;s unpack it a bit. The top tag is <code>&lt;ol&gt;</code>, which stands for &quot;ordered list.&quot; An ordered list is numbered (more accurately, the order in the list matters). Then, within the <code>&lt;ol&gt;</code> tag there is an <code>&lt;li&gt;</code> tag. This is a &quot;list item.&quot; You&#39;re already familiar with the <code>&lt;a&gt;</code> tag and the href attribute.</p>
 <p>We can also change the list from an ordered list to an unordered list (such as a set of bullet points). To accomplish that, all we need to do is substitute <code>&lt;ul&gt;</code> for <code>&lt;ol&gt;</code> in the opening and closing tags. In Markdown, you can use asterisks or hyphens. For example: </p>
 <pre><code>* [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
 

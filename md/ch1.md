@@ -46,11 +46,11 @@ Believe it or not, we know everything to represent the minimal citation to a sec
 
 <DIAGRAM OF U.S.C. CITATION>
 
-First, there is the title: `[1-52]`. Second there is the "U.S.C. §", which requires some escaping of the periods but is written as follows: `U\.S\.C\. §`. Third, there is the section: `\d+(\w+)?`.[^7] And finally, there is the date: `\([19-20]\d\d\)`[^8]. As a reminder for the date, before we put it all together: the date is optional.
+First, there is the title: `[0-9]{1,2}`. Second there is the "U.S.C. §", which requires some escaping of the periods but is written as follows: `U\.S\.C\. §`. Third, there is the section: `\d+(\w+)?`.[^7] And finally, there is the date: `[0-9]{1,2}`[^8]. As a reminder for the date, before we put it all together: the date is optional.
 
 Now, let's put together the citation:
 
-`[1-52] U\.S\.\C. § \d+(\w+)?( \([19-20]\d\d\))?`
+`[0-9]{1,2} U\.S\.\C. § \d+(\w+)?( \([0-9]{4}\))?`
 
 Congratulations. You have constructed a relatively complex regex! And there's more good news, the road gets easier from here.
 
@@ -82,4 +82,4 @@ Congratulations. You have constructed a relatively complex regex! And there's mo
 
 [^7] A different, and more typical, way of writing this would be to use the asterisk `*` metacharacter. Using `*` matches whatever precedes it zero or more times. Accordingly, `.*` matches "a" or "abc123" or even nothing at all. Ultimately, then, the pattern `\d+(\w+)?` could also have been written as `\d+\w*`.
 
-[^8] There are multiple candidates for representing the date. Another might be `\d\d\d\d`. An advanced regex user might use `([0-9]{4}`, which means any four-digit number. I took the license to demonstrate that you can mix and match.
+[^8] There are multiple candidates for representing the date. Another might be `\d\d\d\d` or `\d{4}`. I took the license to demonstrate that you can mix and match.

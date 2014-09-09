@@ -50,17 +50,20 @@ Let's say you wanted to make a page that has a link to each federal court's ECF 
 
 Happily, the URL naming scheme is common to all three courts: "https://ecf.{courtname}.uscourts.gov"[^4]. As we know, in Markdown, writing the link is pretty easy.  
 
+
 	1. [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
 	2. [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
 	3. [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).
 
 As it turns out, this is also all you need to do to write a numbered list in Markdown. If you converted the Markdown into HTML, it would appear as follows:
 
+``` html
 	<ol>
 	<li><a href="https://ecf.vaed.uscourts.gov">U.S. District Court for the Eastern District of Virginia</a>,</li>
 	<li><a href="https://ecf.vawd.uscourts.gov">U.S. District Court for the Eastern District of Virginia</a>, and</li>
 	<li><a href="https://ecf.ca4.uscourts.gov">U.S. Court of Appeals for the Fourth Circuit</a>.</li>
 	</ol>
+```
 
 You can see that this has more complexity. Let's unpack it a bit. The top tag is `<ol>`, which stands for "ordered list." An ordered list is numbered (more accurately, the order in the list matters). Then, within the `<ol>` tag there is an `<li>` tag. This is a "list item." You're already familiar with the `<a>` tag and the href attribute.
 
