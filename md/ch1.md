@@ -4,7 +4,7 @@ We begin our exploration of coding with **regular expressions**.[^1] Sometimes r
 
 Think of regular expressions as a faster, more powerful version of "Find & Replace". When you search for something like "Judge" in a word processor, it'll show only exact matches - at most, you can find "judge" as well by disabling case sensitivity. If you want to find all similar matches, like "judicial" and "judiciary", you'll have to manually search for every type.
 
-If you've used a database like Lexis or West or Fastcase, you've probably used a wildcard pattern such as "*" to handle this sort of thing. But, regular expressions are *even more powerful* because you can tell your computer to match many different types of patterns you're searching for, not just exact text or certain predefined wildcards. Regular expressions give you much more granular control over your patterns, and you can even use them in [Microsoft Word](http://office.microsoft.com/en-us/word-help/find-and-replace-text-by-using-regular-expressions-advanced-HA102350661.aspx). 
+If you've used a database like Lexis or West or Fastcase, you've probably used a wildcard pattern such as `*` to handle this sort of thing. But, regular expressions are *even more powerful* because you can tell your computer to match many different types of patterns you're searching for, not just exact text or certain predefined wildcards. Regular expressions give you much more granular control over your patterns, and you can even use them in [Microsoft Word](http://office.microsoft.com/en-us/word-help/find-and-replace-text-by-using-regular-expressions-advanced-HA102350661.aspx). 
 
 # Regular Expressions
 
