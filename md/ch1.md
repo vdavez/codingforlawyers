@@ -1,12 +1,16 @@
 # Chapter 1: Regular Expressions
 
-We begin our exploration of coding with **regular expressions**.[^1] Sometimes referred to as "regex", regular expressions are a way of representing patterns of characters used predefined rules. 
+We begin our exploration of coding with **regular expressions**.[^1] Sometimes referred to as "regex", regular expressions are a way of representing patterns of characters using predefined rules.
+
+Think of Regular Expressions as a faster, more powerful version of "Find & Replace". When you search for something like "Enacted 2012" in a word processor, it'll show only exact matches - at most, you can find "enacted 2012" as well by disabling case sensitivity. If you want to find all similar matches, like "Enacted 2011" and "Enacted 2014", you'll have to manually search for every year.
+
+Regular Expressions give you a way of telling your computer the **pattern** you're searching for, not just exact text. With regular expressions, you can find **all** citations, and you can even extract information from them, like titles and chapters.
 
 # Regular Expressions
 
-Regex may be intuitive for many lawyers, particularly those who were on law review.[^2] That's because citations and regular expressions are actually closely related. For example, lawyers know what `5 U.S.C. § 552 (2006)` is. We also know that `552 U.S. 5 (2007)` is a different thing entirely. The former is a statute enacted by Congress and codified in the United States Code. The latter is a reported decision of the Supreme Court of the United States published in the bound volumes of the United States Reports. But, let's examine them closely.
+Regex may be intuitive for many lawyers, particularly those who were on law review.[^2] That's because citations and regular expressions are closely related. For example, lawyers know what `5 U.S.C. § 552 (2006)` is. We also know that `552 U.S. 5 (2007)` is a different thing entirely. The former is a statute enacted by Congress and codified in the United States Code. The latter is a reported decision of the Supreme Court of the United States published in the bound volumes of the United States Reports. But, let's examine them closely.
 
-A minimal citation to the United States Code has four main components: (1) the title of the United States Code; (2) "U.S.C. §"; (3) the specific section; and (4) the applicable date (though this is optional). Thus, we know that 42 U.S.C § 1983 is a valid citation to the United States Code, but U.S.C. § 42-1983 is not. Similarly, a minimal citation to the a bound volume of the United States Reports also has four components: (1) the volume of the United States Reports; (2) "U.S."; (3) the starting page for the reported opinion; and (4) the applicable date (this is not optional).
+A minimal citation to the United States Code has four main components: (1) the title of the United States Code; (2) "U.S.C. §"; (3) the specific section; and (4) the applicable date (though this is optional). Thus, we know that 42 U.S.C § 1983 is a valid citation to the United States Code, but U.S.C. § 42-1983 is not. Similarly, a minimal citation to the bound volume of the United States Reports also has four components: (1) the volume of the United States Reports; (2) "U.S."; (3) the starting page for the reported opinion; and (4) the applicable date (this is not optional).
 
 <DIAGRAM OF U.S.C. CITATION>
 
@@ -24,21 +28,21 @@ Almost as soon as we start, though, there's a problem. We don't know how many se
 
 Happily, regex has a "shorthand" way of representing any single digit: `\d`. As a matter of semantics, then, `\d` shorthand is the same as `[0-9]`. If you repeat the shorthand (e.g., `\d\d`), you can represent any integer of a set number of digits. In other words, `\d\d` represents any two-digit number ([00-99]) and `\d\d\d` represents any three-digit number ([000-999]). And, importantly, you can even tell regex that you don't care *how many digits* using the plus sign (`+`). *Any positive integer* can be represented as follows: `\d+`.
 
-You may be wondering why there is a backslash in the shorthand. This is a good, and important question. Regex accept literal characters: `d` is the letter "d", but `\d` is any integer between 0 and 9. In regex, the backslash has a special meaning and is called a "metacharacter". A backslash signals to regex that whatever comes next is something to pay attention to. Similarly, the plus sign that we used before (`\d+`) is a metacharacter. The plus sign signals to regex that you can repeat the preceding regex group. 
+You may be wondering why there is a backslash in the shorthand. This is a good, and important question. Regex accept literal characters: `d` is the letter "d", but `\d` is any integer between 0 and 9. In regex, the backslash has a special meaning and is called a "metacharacter". A backslash signals to regex that whatever comes next is something to pay attention to. Similarly, the plus sign that we used before (`\d+`) is a metacharacter. The plus sign signals to regex that you can repeat the preceding regex group.
 
 In all, regex recognizes 12 metacharacters[^6], though describing all of them is beyond the scope of this chapter. For now, it is merely important to acknowledge that the period (`.`) and parentheses (`(` and `)`) are metacharacters too. 
 
-The period (in regex, a "dot") can represent *any* character. A regex in a parentheses is called a "group." If we want to actually represent a metacharacter in the regex, we use a backslash to "escape" the metacharacter. In other words, if we want to use a period at the end of a sentence, we need to write `\.`, and if we want to use a backslash in our pattern, we need to write `\\`. 
+The period (in regex, a "dot") can represent *any* character. A regex in a parentheses is called a "group." If we want to actually represent a metacharacter in the regex, we use a backslash to "escape" the metacharacter. In other words, if we want to use a period at the end of a sentence, we need to write `\.`, and if we want to use a backslash in our pattern, we need to write `\\`.
 
-By now, you already know a great deal about basic regex. For example, what if we wanted to represent "552a" or "2000aa"? We could do this by writing `\d+a+`. This would also match "1a" and "1234aaaa". And if wanted to do "2000bb", we could just change our regex to be as follows: `\d+[a-z]+`. This would represent "1z" and "12345abcde". 
+By now, you already know a great deal about basic regex. For example, what if we wanted to represent "552a" or "2000aa"? We could do this by writing `\d+a+`. This would also match "1a" and "1234aaaa". And if wanted to do "2000bb", we could just change our regex to be as follows: `\d+[a-z]+`. This would represent "1z" and "12345abcde".
 
 Regex also allows for the shorthand `\w`, which represents any single alphanumeric character. *Any word* can be represented by `\w+`. So, you could simply write the regular expression as `\d+\w+`. Think of `\w` as the ultimate Scrabble piece. Potent stuff.
 
-But, what if you wanted your pattern to match "552a" *and* "552". In other words, you don't *necessarily* want any letters to come after the numbers. To do this, the question mark metacharacter (`?`) comes into play. Here, you could simply write `552a?`, which means that the "a" is optional. By using parentheses for grouping, you can supercharge the use of the `?`. For example, you could write `(\d+)(\w+)?`, which would cover "552", "552a", and "2000bb". By grouping the repeating alphanumeric characters represented by `\w` and putting a question mark afterward, you can basically make all of the letters optional. 
+But, what if you wanted your pattern to match "552a" *and* "552". In other words, you don't *necessarily* want any letters to come after the numbers. To do this, the question mark metacharacter (`?`) comes into play. Here, you could simply write `552a?`, which means that the "a" is optional. By using parentheses for grouping, you can supercharge the use of the `?`. For example, you could write `(\d+)(\w+)?`, which would cover "552", "552a", and "2000bb". By grouping the repeating alphanumeric characters represented by `\w` and putting a question mark afterward, you can basically make all of the letters optional.
 
 ## Assembling the United States Code
 
-Believe it or not, we know everything to represent the minimal citation to a section in the United States Code (and even more complicated ones!). Let's return to the 4 minimum components of the citation: 
+Believe it or not, we know everything to represent the minimal citation to a section in the United States Code (and even more complicated ones!). Let's return to the 4 minimum components of the citation:
 
 <DIAGRAM OF U.S.C. CITATION>
 
@@ -62,9 +66,9 @@ Congratulations. You have constructed a relatively complex regex! And there's mo
 
 ***
 
-## Endnotes 
+## Endnotes
 
-[^1] Many programmers would, I suspect, suggest that this is a strange place to begin. They would argue that it is not really even *coding*. It is my view that this is a proper subject for a beginning chapter. *Cf.* *Brown v. Allen*, 344 U.S. 443, 540 (1953) (Jackson, J., concurring) ("There is no doubt that if there were a super-Supreme Court, a substantial proportion of our reversals of state courts would also be reversed. We are not final because we are infallible, but we are infallible only because we are final."). Plus, by the time you are done with this chapter, you can impress your coding friends that you know basic "regex". A word of caution, the universe of non-coders who will be impressed your knowledge of regex is rather small. 
+[^1] Many programmers would, I suspect, suggest that this is a strange place to begin. They would argue that it is not really even *coding*. It is my view that this is a proper subject for a beginning chapter. *Cf.* *Brown v. Allen*, 344 U.S. 443, 540 (1953) (Jackson, J., concurring) ("There is no doubt that if there were a super-Supreme Court, a substantial proportion of our reversals of state courts would also be reversed. We are not final because we are infallible, but we are infallible only because we are final."). Plus, by the time you are done with this chapter, you can impress your coding friends that you know basic "regex". A word of caution, the universe of non-coders who will be impressed your knowledge of regex is rather small.
 
 [^2] A quick review of my curriculm vitae demonstrates that I was not on law review in law school. I am using many footnotes to compensate.
 
