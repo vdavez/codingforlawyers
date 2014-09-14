@@ -61,6 +61,7 @@ In the end, you have a Markdown-ready result of the Virginia federal courts. And
 Arrays are, in many respects, seductively simple. They are lists: no more, no less.[^7] But when you master arrays, worlds of data become accessible and manipulable in ways that seemed totally impossible before. So, go ahead and play with the interactive scripts above. Maybe even consider [reading more about what arrays can do in python](https://docs.python.org/2/tutorial/datastructures.html).[^8] Congratulations on making it this far!
 
 ## [Previous Chapter: Data Types](/chapters/ch3/)
+## [Next Chapter: Conditional Logic](/chapters/ch5/)
 
 *** 
 

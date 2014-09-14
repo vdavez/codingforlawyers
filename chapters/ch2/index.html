@@ -15,6 +15,7 @@
 
         </style>
         <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/default.min.css">
         <link rel="stylesheet" href="/assets/css/main.css">
 
         <script src="/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -59,45 +60,45 @@
 <li>U.S. District Court for the Western District of Virginia, and</li>
 <li>U.S. Court of Appeals for the Fourth Circuit.</li>
 </ol>
-<p>Happily, the URL naming scheme is common to all three courts: &quot;https://ecf.{courtname}.uscourts.gov&quot;<sup><a href="#fn_4" id="reffn_4">4</a></sup>. As we know, in Markdown, writing the link is pretty easy.  </p>
-<pre><code>1. [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
-2. [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
-3. [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).
+<p>Happily, the URL naming scheme is common to all three courts: &quot;<a href="https://ecf.{courtname}.uscourts.gov&quot;[^4">https://ecf.{courtname}.uscourts.gov&quot;[^4</a>]. As we know, in Markdown, writing the link is pretty easy.  </p>
+<pre><code><span class="hljs-bullet">1. </span>[<span class="hljs-link_label">U.S. District Court for the Eastern District of Virginia</span>](<span class="hljs-link_url">https://ecf.vaed.uscourts.gov</span>),
+<span class="hljs-bullet">2. </span>[<span class="hljs-link_label">U.S. District Court for the Western District of Virginia</span>](<span class="hljs-link_url">https://ecf.vawd.uscourts.gov</span>), and
+<span class="hljs-bullet">3. </span>[<span class="hljs-link_label">U.S. Court of Appeals for the Fourth Circuit</span>](<span class="hljs-link_url">https://ecf.ca4.uscourts.gov</span>).
 </code></pre><p>As it turns out, this is also all you need to do to write a numbered list in Markdown. If you converted the Markdown into HTML, it would appear as follows:</p>
 <pre><code>&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;https://ecf.vaed.uscourts.gov&quot;&gt;U.S. District Court for the Eastern District of Virginia&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://ecf.vawd.uscourts.gov&quot;&gt;U.S. District Court for the Eastern District of Virginia&lt;/a&gt;, and&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://ecf.ca4.uscourts.gov&quot;&gt;U.S. Court of Appeals for the Fourth Circuit&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;<span class="hljs-operator">a</span> href=<span class="hljs-string">"https://ecf.vaed.uscourts.gov"</span>&gt;U.S. District Court <span class="hljs-keyword">for</span> <span class="hljs-operator">the</span> Eastern District <span class="hljs-operator">of</span> Virginia&lt;/<span class="hljs-operator">a</span>&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;<span class="hljs-operator">a</span> href=<span class="hljs-string">"https://ecf.vawd.uscourts.gov"</span>&gt;U.S. District Court <span class="hljs-keyword">for</span> <span class="hljs-operator">the</span> Eastern District <span class="hljs-operator">of</span> Virginia&lt;/<span class="hljs-operator">a</span>&gt;, <span class="hljs-operator">and</span>&lt;/li&gt;
+&lt;li&gt;&lt;<span class="hljs-operator">a</span> href=<span class="hljs-string">"https://ecf.ca4.uscourts.gov"</span>&gt;U.S. Court <span class="hljs-operator">of</span> Appeals <span class="hljs-keyword">for</span> <span class="hljs-operator">the</span> Fourth Circuit&lt;/<span class="hljs-operator">a</span>&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 </code></pre><p>You can see that this has more complexity. Let&#39;s unpack it a bit. The top tag is <code>&lt;ol&gt;</code>, which stands for &quot;ordered list.&quot; An ordered list is numbered (more accurately, the order in the list matters). Then, within the <code>&lt;ol&gt;</code> tag there is an <code>&lt;li&gt;</code> tag. This is a &quot;list item.&quot; You&#39;re already familiar with the <code>&lt;a&gt;</code> tag and the href attribute.</p>
 <p>We can also change the list from an ordered list to an unordered list (such as a set of bullet points). To accomplish that, all we need to do is substitute <code>&lt;ul&gt;</code> for <code>&lt;ol&gt;</code> in the opening and closing tags. In Markdown, you can use asterisks or hyphens. For example: </p>
-<pre><code>* [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
+<pre><code><span class="hljs-bullet">* </span>[<span class="hljs-link_label">U.S. District Court for the Eastern District of Virginia</span>](<span class="hljs-link_url">https://ecf.vaed.uscourts.gov</span>),
 
-* [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
+<span class="hljs-bullet">* </span>[<span class="hljs-link_label">U.S. District Court for the Western District of Virginia</span>](<span class="hljs-link_url">https://ecf.vawd.uscourts.gov</span>), and
 
-* [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).
+<span class="hljs-bullet">* </span>[<span class="hljs-link_label">U.S. Court of Appeals for the Fourth Circuit</span>](<span class="hljs-link_url">https://ecf.ca4.uscourts.gov</span>).
 </code></pre><p>We could stop there. But, let&#39;s gussy it up a little more. What if we wanted a heading? Something that said &quot;Virginia Federal Courts&quot; and then &quot;District&quot; and &quot;Circuit&quot; as smaller headings. Markdown makes this easy:</p>
-<pre><code># Virgina Federal Courts
+<pre><code><span class="hljs-header"># Virgina Federal Courts</span>
 
-## District
+<span class="hljs-header">## District</span>
 
-* [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
-* [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
+<span class="hljs-bullet">* </span>[<span class="hljs-link_label">U.S. District Court for the Eastern District of Virginia</span>](<span class="hljs-link_url">https://ecf.vaed.uscourts.gov</span>),
+<span class="hljs-bullet">* </span>[<span class="hljs-link_label">U.S. District Court for the Western District of Virginia</span>](<span class="hljs-link_url">https://ecf.vawd.uscourts.gov</span>), and
 
-## Circuit
+<span class="hljs-header">## Circuit</span>
 
-* [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).
+<span class="hljs-bullet">* </span>[<span class="hljs-link_label">U.S. Court of Appeals for the Fourth Circuit</span>](<span class="hljs-link_url">https://ecf.ca4.uscourts.gov</span>).
 </code></pre><p>This would translate to the following HTML:</p>
-<pre><code>&lt;h1&gt;Virgina Federal Courts&lt;/h1&gt;
-&lt;h2&gt;District&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://ecf.vaed.uscourts.gov&quot;&gt;U.S. District Court for the Eastern District of Virginia&lt;/a&gt;,&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://ecf.vawd.uscourts.gov&quot;&gt;U.S. District Court for the Western District of Virginia&lt;/a&gt;, and&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Circuit&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://ecf.ca4.uscourts.gov&quot;&gt;U.S. Court of Appeals for the Fourth Circuit&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
+<pre><code><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Virgina Federal Courts<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>District<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://ecf.vaed.uscourts.gov"</span>&gt;</span>U.S. District Court for the Eastern District of Virginia<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>,<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://ecf.vawd.uscourts.gov"</span>&gt;</span>U.S. District Court for the Western District of Virginia<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>, and<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">h2</span>&gt;</span>Circuit<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"https://ecf.ca4.uscourts.gov"</span>&gt;</span>U.S. Court of Appeals for the Fourth Circuit<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
 </code></pre><p>Take note that HTML describes the heading as <code>&lt;h1&gt;</code> and <code>&lt;h2&gt;</code>. This is baked into HTML to show these as headings. Also take note that the District and Circuit lists are separate unordered lists, so the HTML must close the first <code>&lt;ul&gt;</code> tag before the Circuit heading is introduced. </p>
 <p>Try to copy and paste that HTML into a plain text file, save it as &quot;ecf_va.html&quot;, and open the file in the browser. Voila, you have  a working HTML file with a link to the Virgina federal courts&#39; ECF sites.</p>
 <h2 id="conclusion">Conclusion</h2>
@@ -123,6 +124,7 @@
 
         <script src="/assets/js/vendor/jquery-1.11.0.min.js"></script>
         <script src="/assets/js/vendor/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
         <script src="/assets/js/main.js"></script>
         <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
