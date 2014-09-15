@@ -5,7 +5,9 @@ collections:
   chapters:
     output: true
     permalink: "/chapters/:path/"
-
+  pages:
+    output: true
+    
 defaults:
   -
     scope:
