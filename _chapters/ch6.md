@@ -18,19 +18,19 @@ DRY is the same principle that underlies form pleadings and standard contract pr
 
 A core part of implementation for DRY in code is the use of "functions". You use functions to have computers *do* something. You can define a function as simple as "say hello" or as complicated as "cure cancer".[^4] When you "call" a function, you are telling the computer to do the defined thing. With that understanding, let's define a simple function in Javascript. [^5]
 
-``` javascript
+{% highlight javascript %}
 function readVerdict (verdict) {
 	console.log("We  find the defendant " + verdict + " on all counts.");
 }
 
 readVerdict("guilty")
-```
+{% endhighlight %}
 
 Here, we have defined a function called `readVerdict`, and defined a parameter called `verdict`. The `readVerdict` function simply prints to the console a phrase, which depends on what the value of the `verdict` is. If `verdict` is "guilty", then the result of the function call `readVerdict("guilty")` would be "We find the defendant guilty on all counts." Similarly, `readVerdict("not guilty")` would result in "We find the defendant not guilty on all counts." By simply changing the value of verdict, we get a different (though related) result.
 
 The other powerful feature of functions is that they can give a "return" value. For example, suppose you wrote the following function:
 
-``` javascript
+{% highlight javascript %}
 
 // Define the function with a "rule" parameter
 function fre (rule) {
@@ -50,7 +50,7 @@ function fre (rule) {
 // Print the returned value to the console.
 console.log(fre(403))
 
-```
+{% endhighlight %}
 
 The script above  has several parts, so let's examine them one by one. First, we defined a function called "fre." We define the function to accept, as an input, a "rule." Next, we check to see whether `rule` is equal to `403`. If it is, we "return" the string associated with Rule 403 of the Federal Rules of Evidence. If the rule is not `403`, we return a different string. Finally, we call `fre`, pass `403` as an argument,[^6] and print the retured value of the function to the console.[^7]
 

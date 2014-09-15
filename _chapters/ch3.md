@@ -50,23 +50,23 @@ As a thought experiment, try to describe a music album. You might describe the g
 
 So, for example, "Hey Jude" by the Beatles, might be described as:
 
-```
+{% highlight javascript %}
 {
 	"title": "Hey Jude"
 	"group": "Beatles",
 	"tracks": ["Can't Buy Me Love","I Should Have Known Better","Paperback Writer","Rain","Lady Madonna","Revolution","Hey Jude","Old Brown Shoe","Don't Let Me Down","The Ballad of John and Yoko"],
 	"released":1970
 }
-```
+{% endhighlight %}
 
 This is an object. It uses "keys" and "values" to describe attributes of the object. Let's define a variable "scotus" as an object:
 
-```
+{% highlight javascript %}
 scotus = {
 	"name": "Supreme Court of the United States",
 	"justices": ["Roberts","Scalia","Kennedy","Thomas","Ginsburg","Breyer","Alito","Sotomayor","Kagan"]
 }
-```
+{% endhighlight %}
 
 The reason objects are special is that you can access the attributes in a powerful way. So, for example, if you asked the computer what `scotus["name"]` is, the computer would say: `"Supreme Court of the United States"`.
 

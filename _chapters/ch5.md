@@ -23,7 +23,7 @@ It is bad form to ask a hostile witness "About how fast would you say you were g
 
 Since we are talking about witnesses at trial, it's helpful to think about the rules of evidence. Typically, the rules of evidence follow a specific pattern: `if` the evidence you present to a judge meets the test established by the rules of evidence in your jurisdiction `then` the judge shall allow it into evidence. In programming, `if` tests work the same way.
 
-```python
+{% highlight python %}
 # Define hearsay as a boolean
 hearsay = True
 
@@ -31,7 +31,7 @@ hearsay = True
 if hearsay == True:
 
 	print "This is a statement, other than one made by the declarant while testifying at the trial or hearing, offered in evidence to prove the truth of the matter asserted."
-```
+{% endhighlight %}
 
 In programming, like in trial, you can evaluate the truth of a statement to prove the truth of the matter asserted. In the first line of the code, a variable `hearsay` is created and it is given the value of the boolean `True`. In the next line, there is a conditional test which asks if the `hearsay` variable (acting as the first "thing") is equal to the boolean `True` (acting as the second "thing"). Indeed, it is, because we just told the computer that it was in the line above. If the test passes, then the remainder of the `if` statement is run and the string in the third line of code will be printed. Because we know that the test will pass, when we run the above code we will see the string printed out.
 
@@ -41,7 +41,7 @@ One tricky item to note about the above code is to know the difference between w
 
 Many times when you are programming you will want to make conditional tests which are more complex than the above example. In these instances often you want to tell the computer to first perform one test, and if that one is not successful to try another test. The first test is an `if` test which is covered above. The second test is usually called an `else-if` test. In other words, else (meaning the previous test failed) ... if (perform this test). Let's take a look at another example.
 
-```python
+{% highlight python %}
 relevant = True
 probative_value = 10
 prejudicial_effect = 5
@@ -51,7 +51,7 @@ if relevant == False:
 
 else if prejudicial_effect > probative_value:
 	print "The evidence is not admissible under Federal Rule of Evidence 403."
-```
+{% endhighlight %}
 
 The above code builds upon the first bit of code we built. In the first line, we define a variable `relevant` to be a boolean `True`. Then, we define two variables `probative_value` and `prejudicial_effect` as integers.[^3]
 
@@ -63,7 +63,7 @@ But, if `relevant` were `False` in the example, the computer would skip over the
 
 When you are making strings of conditionals sometimes you want to tell the computer that if all the tests pass then what it should do. So, for the example above, what happens if the prejudicial effect did *not* weigh the probative value? To program that, we use a `else` statement.
 
-```python
+{% highlight python %}
 relevant = True
 probative_value = 5
 prejudicial_effect = 10
@@ -76,7 +76,7 @@ else if prejudicial_effect > probative_value:
 
 else:
 	print "The evidence is admitted into evidence."
-```
+{% endhighlight %}
 
 In the above code we have switched the values of `probative_effect` and `prejudicial_effect` but otherwise kept most the code the same. In the last two lines, however, we  added an `else` statement. Unlike `if` and `else-if`, `else` does not contain a test. This is because `else` means if all the other tests have failed, do this.
 
