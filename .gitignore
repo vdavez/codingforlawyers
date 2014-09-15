@@ -1,1 +1,9 @@
 _site
+
+# bower bloat
+assets/vendor/bootstrap/grunt
+assets/vendor/bootstrap/less
+assets/jquery/src
+assets/modernizr/test
+assets/modernizr/media
+assets/modernizr/feature-detects
