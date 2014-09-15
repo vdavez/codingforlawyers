@@ -4,7 +4,10 @@ title: "Chapter 4: Using Arrays"
 
 In the last chapter, we described the following array, which we'll define as "justices":
 
-`justices = ["Roberts","Scalia","Kennedy","Thomas","Ginsburg","Breyer","Alito","Sotomayor","Kagan"]`
+
+{% highlight javascript %}
+justices = ["Roberts","Scalia","Kennedy","Thomas","Ginsburg","Breyer","Alito","Sotomayor","Kagan"]
+{% endhighlight %}
 
 Let's try a few things in python.[^1]
 
