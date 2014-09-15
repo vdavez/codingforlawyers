@@ -1,6 +1,7 @@
 ---
 title: Frequently Asked Questions
-#permalink: faq
+permalink: /faq/
+redirect_from: "/faq.html"
 layout: default
 ---
 
