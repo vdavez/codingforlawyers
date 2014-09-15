@@ -1,5 +1,6 @@
 _site
 Gemfile
+Gemfile.lock
 
 # bower bloat
 assets/vendor/bootstrap/grunt
