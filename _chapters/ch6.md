@@ -20,7 +20,7 @@ A core part of implementation for DRY in code is the use of "functions". You use
 
 {% highlight javascript %}
 function readVerdict (verdict) {
-	console.log("We  find the defendant " + verdict + " on all counts.");
+	console.log("We find the defendant " + verdict + " on all counts.");
 }
 
 readVerdict("guilty")
