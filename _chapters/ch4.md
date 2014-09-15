@@ -4,7 +4,6 @@ title: "Chapter 4: Using Arrays"
 
 In the last chapter, we described the following array, which we'll define as "justices":
 
-
 {% highlight javascript %}
 justices = ["Roberts","Scalia","Kennedy","Thomas","Ginsburg","Breyer","Alito","Sotomayor","Kagan"]
 {% endhighlight %}
