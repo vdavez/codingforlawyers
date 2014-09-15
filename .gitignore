@@ -3,7 +3,7 @@ _site
 # bower bloat
 assets/vendor/bootstrap/grunt
 assets/vendor/bootstrap/less
-assets/jquery/src
-assets/modernizr/test
-assets/modernizr/media
-assets/modernizr/feature-detects
+assets/vendor/jquery/src
+assets/vendor/modernizr/test
+assets/vendor/modernizr/media
+assets/vendor/modernizr/feature-detects
