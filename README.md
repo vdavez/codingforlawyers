@@ -11,6 +11,6 @@ Chapters live in the `_chapters` folder as markdown files.
 
 ## Running locally
 
-1. `bundle install`
-2. `bundle exec jekyll serve --watch`
+1. `gem install github-pages`
+2. `jekyll serve --watch`
 3. Open [localhost:4000](https://localhost:4000) in your browser
