@@ -1,0 +1,20 @@
+title: "Coding for Lawyers"
+
+collections:
+  chapters:
+    output: true
+    permalink: "/chapters/:path/"
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "chapters"
+    values:
+      layout: "chapter"
+
+markdown: kramdown
+
+gems:
+  - jekyll-sitemap
+  

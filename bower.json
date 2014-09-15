@@ -1,0 +1,13 @@
+{
+  "name": "codingforlawyers",
+  "version": "0.0.0",
+  "homepage": "https://github.com/vzvenyach/codingforlawyers",
+  "authors": [
+    "V. David Zvenyach <dave@esq.io>"
+  ],
+  "license": "CC-BY",
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "modernizr": "~2.8.3"
+  }
+}
