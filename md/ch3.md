@@ -50,7 +50,7 @@ So, for example, "Hey Jude" by the Beatles, might be described as:
 
 ```
 {
-	"title": "Hey Jude"
+	"title": "Hey Jude",
 	"group": "Beatles",
 	"tracks": ["Can't Buy Me Love","I Should Have Known Better","Paperback Writer","Rain","Lady Madonna","Revolution","Hey Jude","Old Brown Shoe","Don't Let Me Down","The Ballad of John and Yoko"],
 	"released":1970
