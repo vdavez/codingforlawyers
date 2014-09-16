@@ -76,4 +76,4 @@ In theory, you could define the `fre` function above with a bunch of if-else sta
 
 [^6]: You might be thinking: wait, an "argument"? Earlier this was described as a "parameter"! That's true. When you are defining a function, you define the inputs as "parameters". But when you are calling a defined function, you are passing an argument. In my experience, developers are loose about referring to parameters as arguments. So, I will take the liberty to call them "arguments" henceforth.
 
-[^7]: One thing to note is that, in many language, order matters. In python, for example, you must define a function before you can call it. Javascript is a little more flexible, but it's something to pay attention to.
+[^7]: One thing to note is that, in many languages, order matters. In python, for example, you must define a function before you can call it. Javascript is a little more flexible, but it's something to pay attention to.

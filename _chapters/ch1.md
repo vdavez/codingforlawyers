@@ -52,7 +52,7 @@ First, there is the title: `[0-9]{1,2}`. Second there is the "U.S.C. §", which 
 
 Now, let's put together the citation:
 
-`[0-9]{1,2} U\.S\.\C. § \d+(\w+)?( \([0-9]{4}\))?`
+`[0-9]{1,2} U\.S\.C\. § \d+(\w+)?( \([0-9]{4}\))?`
 
 Congratulations. You have constructed a relatively complex regex! And there's more good news, the road gets easier from here.
 

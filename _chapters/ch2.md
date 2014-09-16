@@ -12,15 +12,15 @@ Markdown, when it gets right down to it, is just a way to "mark up" text and des
 
 Let's say you want to italicize a sentence in a document. In a word processor, you would highlight the sentence and either press Ctrl-I or the little "italics" icon. I suppose there may be other ways, but that's the conventional one.
 
-[[MARGINALIA: "USE AN ASTERISK FOR ITALICS"]] In Markdown, you put an asterisk before and after the sentence. So `*this is an example of an italicized phrase*` would look like: *this is an example of an italicized phrase*.
+In Markdown, you put an asterisk before and after the sentence. So `*this is an example of an italicized phrase*` would look like: *this is an example of an italicized phrase*.
 
-[[MARGINALIA: "USE TWO ASTERISKS FOR BOLD"]] Let's say you wanted to make a word bold? In Markdown, you put *two* asterisks before and after the word. So `**bold**` looks like: **bold**.
+Let's say you wanted to make a word bold? In Markdown, you put *two* asterisks before and after the word. So `**bold**` looks like: **bold**.
 
 And if you want something italicized *and* bold? You've got it: *three* asterisks. `***italicized and bold***` looks like: ***italicized and bold***.
 
 So far so good. But, this is intended for the Internet. So, let's try something a little more exciting: a link to a website.
 
-[[MARGINALIA RE URL]] A link to a website requires only slightly more markup. To include a link to this book's website, you would need to put brackets around the link, and put the URL[^2] within parentheses. So, `Tell your friends to visit [Coding for Lawyers](http://codingforlawyers.com)` would look like: Tell your friends to visit [Coding for Lawyers](https://codingforlawyers.com).
+A link to a website requires only slightly more markup. To include a link to this book's website, you would need to put brackets around the link, and put the URL[^2] within parentheses. So, `Tell your friends to visit [Coding for Lawyers](http://codingforlawyers.com)` would look like: Tell your friends to visit [Coding for Lawyers](https://codingforlawyers.com).
 
 ## An intro to HTML
 
