@@ -8,7 +8,7 @@ Before diving into Markdown, and at the risk of alienating many readers, I want 
 
 Markdown, when it gets right down to it, is just a way to "mark up" text and describe certain things to a computer, so the computer knows what is important to the eventual reader. That's it. It's a simple, powerful way of making all kinds of marks around plain text in order to make the text more useable.
 
-## An Intro to Markdown Syntax[^1]
+### An Intro to Markdown Syntax[^1]
 
 Let's say you want to italicize a sentence in a document. In a word processor, you would highlight the sentence and either press Ctrl-I or the little "italics" icon. I suppose there may be other ways, but that's the conventional one.
 
@@ -22,7 +22,7 @@ So far so good. But, this is intended for the Internet. So, let's try something 
 
 A link to a website requires only slightly more markup. To include a link to this book's website, you would need to put brackets around the link, and put the URL[^2] within parentheses. So, `Tell your friends to visit [Coding for Lawyers](http://codingforlawyers.com)` would look like: Tell your friends to visit [Coding for Lawyers](http://codingforlawyers.com).
 
-## An intro to HTML
+### An intro to HTML
 
 Now that you understand a bit of Markdown syntax, we'll turn attention briefly to HTML. As it turns out, the main *reason* Markdowneven  exists  is that writing HTML is annoying. Now, you may be asking, "why would anyone write HTML?" And perhaps before that, you may be asking, "what is HTML?"
 
@@ -40,7 +40,7 @@ To define the link's target, you define an "attribute" for the tag. Specifically
 
 If you copied and pasted this exact phrase into a plain text file, saved it as "test.html", and opened that file in a browser, you would have a working HTML document. Neat, huh?
 
-## More syntax in Markdown and HTML
+### More syntax in Markdown and HTML
 
 Recognizing that Markdown and HTML are closely related, let's explore some more Markdown and HTML syntax.
 
@@ -108,7 +108,7 @@ Take note that HTML describes the heading as `<h1>` and `<h2>`. This is baked in
 
 Try to copy and paste that HTML into a plain text file, save it as "ecf_va.html", and open the file in the browser. Voila, you have  a working HTML file with a link to the Virgina federal courts' ECF sites.
 
-## Conclusion
+### Conclusion
 
 At this point, you should have a sense of how Markdown and HTML look and interact with each other. You should take time to learn the Markdown syntax from the official specification. There are a few other use cases -- especially blockquotes -- in Markdown that you should be aware of.
 
@@ -116,14 +116,9 @@ Getting to fully understand HTML, on the other hand, can be much more involved. 
 
 If you stopped here, you would be able to meaningfully build beautiful websites using Markdown. But you won't stop here, because it keeps gets better...
 
-## [Previous Chapter: Regular Expressions](/chapters/ch1/)
-
-## [Next Chapter: Data Types](/chapters/ch3/)
-
-
 ***
 
-## Endnotes
+### Endnotes
 
 [^1]: At some point, you should read the entire Markdown syntax documentation. It is very short, but covers a significant amount of ground. You should also know that there are many different "flavors" of Markdown. A flavor is a subtle variation of Markdown to provide specific features, such as footnotes.
 

@@ -8,7 +8,7 @@ Think of regular expressions as a faster, more powerful version of "Find & Repla
 
 If you've used a database like Lexis or West or Fastcase, you've probably used a wildcard pattern such as `*` to handle this sort of thing. But, regular expressions are *even more powerful* because you can tell your computer to match many different types of patterns you're searching for, not just exact text or certain predefined wildcards. Regular expressions give you much more granular control over your patterns, and you can even use them in [Microsoft Word](http://office.microsoft.com/en-us/word-help/find-and-replace-text-by-using-regular-expressions-advanced-HA102350661.aspx).
 
-# Regular Expressions
+### Regular Expressions
 
 Regex may be intuitive for many lawyers, particularly those who were on law review.[^2] That's because citations and regular expressions are closely related. For example, lawyers know what `5 U.S.C. § 552 (2006)` is. We also know that `552 U.S. 5 (2007)` is a different thing entirely. The former is a statute enacted by Congress and codified in the United States Code. The latter is a reported decision of the Supreme Court of the United States published in the bound volumes of the United States Reports. But, let's examine them closely.
 
@@ -18,7 +18,7 @@ A minimal citation to the United States Code has four main components: (1) the t
 
 Regex allows us to assemble patterns so that a computer could recognize these patterns. Let's see how.
 
-## The building blocks of regex
+### The building blocks of regex
 
 We know that as of September 1, 2014, there are 52 titles of the United States Code.[^3] That means we can represent the first component of a citation with *either* a one-digit number (e.g., "8") or a two-digit number ("18"). In regex, we can represent any single digit as `[0-9]`. That means that regex will match any number between 0 and 9. What about *two* digits? Well, we could write `[0-9][0-9]` and that would capture `15` and `25`. Unfortunately, though, would reject `8` because `8` only has one digit.
 
@@ -42,7 +42,7 @@ Regex also allows for the shorthand `\w`, which represents any single alphanumer
 
 But, what if you wanted your pattern to match "552a" *and* "552". In other words, you don't *necessarily* want any letters to come after the numbers. To do this, the question mark metacharacter (`?`) comes into play. Here, you could simply write `552a?`, which means that the "a" is optional. By using parentheses for grouping, you can supercharge the use of the `?`. For example, you could write `(\d+)(\w+)?`, which would cover "552", "552a", and "2000bb". By grouping the repeating alphanumeric characters represented by `\w` and putting a question mark afterward, you can basically make all of the letters optional.
 
-## Assembling the United States Code
+### Assembling the United States Code
 
 Believe it or not, we know everything to represent the minimal citation to a section in the United States Code (and even more complicated ones!). Let's return to the 4 minimum components of the citation:
 
@@ -56,7 +56,7 @@ Now, let's put together the citation:
 
 Congratulations. You have constructed a relatively complex regex! And there's more good news, the road gets easier from here.
 
-## Homework
+### Homework
 
 1. Practice with a website: A few good examples are [rubular](http://www.rubular.com/),the more feature-filled [regex 101](http://regex101.com/) and the famous [RegExr](http://www.regexr.com/).
 
@@ -64,15 +64,13 @@ Congratulations. You have constructed a relatively complex regex! And there's mo
 
 3. Write a regular expression to capture a simple email address.
 
-## [Next Chapter: Markdown and HTML](/chapters/ch2/)
-
 ***
 
-## Endnotes
+### Endnotes
 
 [^1]: Many programmers would, I suspect, suggest that this is a strange place to begin. They would argue that it is not really even *coding*. It is my view that this is a proper subject for a beginning chapter. *Cf.* *Brown v. Allen*, 344 U.S. 443, 540 (1953) (Jackson, J., concurring) ("There is no doubt that if there were a super-Supreme Court, a substantial proportion of our reversals of state courts would also be reversed. We are not final because we are infallible, but we are infallible only because we are final."). Plus, by the time you are done with this chapter, you can impress your coding friends that you know basic "regex". A word of caution, the universe of non-coders who will be impressed your knowledge of regex is rather small.
 
-[^2]: A quick review of my curriculm vitae demonstrates that I was not on law review in law school. I am using many footnotes to compensate.
+[^2]: A quick review of my curriculum vitae demonstrates that I was not on law review in law school. I am using many footnotes to compensate.
 
 [^3]: Editorial Reclassification, Title 52, United States Code, *available online at* [http://uscode.house.gov/editorialreclassification/t52/index.html](http://uscode.house.gov/editorialreclassification/t52/index.html).
 
