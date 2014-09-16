@@ -20,7 +20,7 @@ And if you want something italicized *and* bold? You've got it: *three* asterisk
 
 So far so good. But, this is intended for the Internet. So, let's try something a little more exciting: a link to a website.
 
-A link to a website requires only slightly more markup. To include a link to this book's website, you would need to put brackets around the link, and put the URL[^2] within parentheses. So, `Tell your friends to visit [Coding for Lawyers](http://codingforlawyers.com)` would look like: Tell your friends to visit [Coding for Lawyers](https://codingforlawyers.com).
+A link to a website requires only slightly more markup. To include a link to this book's website, you would need to put brackets around the link, and put the URL[^2] within parentheses. So, `Tell your friends to visit [Coding for Lawyers](http://codingforlawyers.com)` would look like: Tell your friends to visit [Coding for Lawyers](http://codingforlawyers.com).
 
 ## An intro to HTML
 
