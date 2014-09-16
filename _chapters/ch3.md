@@ -38,9 +38,9 @@ Couldn't be simpler, right? Ok, sidebar over.
 
 ### Exhibit 5: Array
 
-An array, despite its total simplicity, is a surprisingly powerful data type. An array is a list of data. That's it.  Here's an example of an array:
+An array, despite its total simplicity, is a surprisingly powerful data type. An array is a list of other data types.  Arrays are defined in many languages by a comma-separated list of items placed into square brackets. For example, here's an example of an array of strings (you remember strings from a second ago, right?):
 
-`["Roberts","Scalia","Kennedy","Thomas","Ginsburg","Breyer","Alito","Sotomayor","Kagan"]`
+`["Roberts", "Scalia", "Kennedy", "Thomas", "Ginsburg", "Breyer", "Alito", "Sotomayor", "Kagan"]`
 
 Piece of cake? Good.
 
@@ -53,22 +53,33 @@ So, for example, "Hey Jude" by the Beatles, might be described as:
 {% highlight javascript %}
 {
 	"title": "Hey Jude",
-	"group": "Beatles",
-	"tracks": ["Can't Buy Me Love","I Should Have Known Better","Paperback Writer","Rain","Lady Madonna","Revolution","Hey Jude","Old Brown Shoe","Don't Let Me Down","The Ballad of John and Yoko"],
-	"released":1970
+	"artist": "Beatles",
+	"tracks": [
+	    "Can't Buy Me Love", 
+	    "I Should Have Known Better", 
+	    "Paperback Writer", 
+	    "Rain", 
+	    "Lady Madonna", 
+	    "Revolution", 
+	    "Hey Jude", 
+	    "Old Brown Shoe", 
+	    "Don't Let Me Down", 
+	    "The Ballad of John and Yoko"
+	],
+	"released": 1970
 }
 {% endhighlight %}
 
-This is an object. It uses "keys" and "values" to describe attributes of the object. Let's define a variable "scotus" as an object:
+This is an object. It uses "keys"(e.g. "title", "artist", etc.) and "values" ("Hey Jude", "Beatles", etc.) to describe attributes of the object. Let's define a variable "scotus" as an object:
 
 {% highlight javascript %}
 scotus = {
 	"name": "Supreme Court of the United States",
-	"justices": ["Roberts","Scalia","Kennedy","Thomas","Ginsburg","Breyer","Alito","Sotomayor","Kagan"]
+	"justices": ["Roberts", "Scalia", "Kennedy", "Thomas", "Ginsburg", "Breyer", "Alito", "Sotomayor", "Kagan"]
 }
 {% endhighlight %}
 
-The reason objects are special is that you can access the attributes in a powerful way. So, for example, if you asked the computer what `scotus["name"]` is, the computer would say: `"Supreme Court of the United States"`.
+The reason objects are special is that you can access the attributes in a powerful way. So, for example, if you asked the computer what `scotus["name"]` was, the computer would say: `"Supreme Court of the United States"`.
 
 ### Conclusion
 
