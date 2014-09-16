@@ -1,0 +1,11 @@
+_site
+Gemfile
+Gemfile.lock
+
+# bower bloat
+assets/vendor/bootstrap/grunt
+assets/vendor/bootstrap/less
+assets/vendor/jquery/src
+assets/vendor/modernizr/test
+assets/vendor/modernizr/media
+assets/vendor/modernizr/feature-detects

@@ -1,0 +1,23 @@
+title: "Coding for Lawyers"
+repo: "https://github.com/vzvenyach/codingforlawyers"
+
+collections:
+  chapters:
+    output: true
+    permalink: "/chapters/:path/"
+  pages:
+    output: true
+    
+defaults:
+  -
+    scope:
+      path: ""
+      type: "chapters"
+    values:
+      layout: "chapter"
+
+markdown: kramdown
+
+gems:
+  - jekyll-sitemap
+  - jekyll-redirect-from
