@@ -30,7 +30,7 @@ Now, let's try something a little different:
 
 <iframe src="https://trinket.io/embed/python/6c699324b4" width="100%" height="150" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
-What's going on here? On line #5, we printed something to the command line. But we did two very interesting things. First, we combined two strings (remember [strings](/chapters/ch2/index.html#exhibit-1-strings)?) Second, we accessed the first string in the justices array.
+What's going on here? On line #5, we printed something to the command line. But we did two very interesting things. First, we combined two strings (remember [strings](/chapters/ch3/index.html#exhibit-1-strings)?) Second, we accessed the first string in the justices array.
 
 To access the first string in the justices array (that's called the first "index" of the array), we called `justices[0]`, not `justices[1]`. This convention of referring to the first number by "zero" instead of "one" is called ["zero-based numbering"](http://en.wikipedia.org/wiki/Zero-based_numbering). If you think this convention is odd, that's ok. But it's a "super-precedent"[^3] entitled to [*stare decisis*](http://www.law.cornell.edu/wex/stare_decisis), so you need to know it exists.
 
