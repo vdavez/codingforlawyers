@@ -42,6 +42,6 @@ Obviously not. Don't be ridiculous.
 
 ***
 
-[^1] There's not a great word for this. Developer? Civic hacker? Programmer?
+[^1]: There's not a great word for this. Developer? Civic hacker? Programmer?
 
-[^2] Full disclosure: I have a degree in mechanical engineering. I love numbers but most of my peers don't.  
+[^2]: Full disclosure: I have a degree in mechanical engineering. I love numbers but most of my peers don't.  
