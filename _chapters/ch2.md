@@ -10,7 +10,7 @@ Markdown, when it gets right down to it, is just a way to "mark up" text and des
 
 ### An Intro to Markdown Syntax[^1]
 
-Let's say you want to italicize a sentence in a document. In a word processor, you would highlight the sentence and either press <kbd>Ctrl-I<kbd> or the little "italics" icon. I suppose there may be other ways, but those are the conventional ones.
+Let's say you want to italicize a sentence in a document. In a word processor, you would highlight the sentence and either press <kbd>Ctrl-I</kbd> or the little "italics" icon. I suppose there may be other ways, but those are the conventional ones.
 
 In Markdown, to do this you put an asterisk before and after the sentence. So `*this is an example of an italicized phrase*` would look like: *this is an example of an italicized phrase*.
 
