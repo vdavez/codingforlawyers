@@ -58,7 +58,7 @@ Congratulations. You have constructed a relatively complex regex! And there's mo
 
 ## Homework
 
-1. Practice with a website: A few good examples are [rubular](http://www.rubular.com/) and the more feature-filled [regex 101](http://regex101.com/).
+1. Practice with a website: A few good examples are [rubular](http://www.rubular.com/),the more feature-filled [regex 101](http://regex101.com/) and the famous [RegExr](http://www.regexr.com/).
 
 2. Extend the regular expression to capture subsections and paragraphs.
 
