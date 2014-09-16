@@ -2,7 +2,7 @@
 title: "Chapter 6: DRY and Functions"
 ---
 
-## The DRY principle
+### The DRY principle
 
 From time to time, developers will refer to something called DRY, and lawyers would do well to embrace it when appropriate. DRY stands for "Don't Repeat Yourself" and is an important, deeply embedded cultural norm for developers. Note, this norm is *not* deeply  embedded for most lawyers, at least formally. In fact, some lawyers are openly hostile to the DRY principle. Let me give you an example. In the world of technology, using an acronym or an initialism to describe something you say a lot is a no-brainer. It is *completely normal* for a programmer to ask "Can I get the JSON or XML through a REST API?"[^1] By contrast, when *lawyers* use abbreviations, they are open to criticism. Consider this concurring opinion from a senior federal appellate court judge:
 
@@ -14,7 +14,7 @@ So, why should lawyers care about DRY? The answer is simple: used correctly, DRY
 
 DRY is the same principle that underlies form pleadings and standard contract provisions. It is the reason that you reuse major chunks of your "standard of review" section in your briefs. In other words, you likely already have DRY in your practice, you just never knew that it had a name. It does, and I won't repeat it.
 
-## Functions
+### Functions
 
 A core part of implementation for DRY in code is the use of "functions". You use functions to have computers *do* something. You can define a function as simple as "say hello" or as complicated as "cure cancer".[^4] When you "call" a function, you are telling the computer to do the defined thing. With that understanding, let's define a simple function in Javascript. [^5]
 
@@ -54,13 +54,11 @@ console.log(fre(403))
 
 The script above  has several parts, so let's examine them one by one. First, we defined a function called "fre." We define the function to accept, as an input, a "rule." Next, we check to see whether `rule` is equal to `403`. If it is, we "return" the string associated with Rule 403 of the Federal Rules of Evidence. If the rule is not `403`, we return a different string. Finally, we call `fre`, pass `403` as an argument,[^6] and print the retured value of the function to the console.[^7]
 
-## Conclusion
+### Conclusion
 
 The `fre` function above illustrates a use case that I suspect many lawyers experience. You need to quote a rule in a brief, so you end up copying and pasting the rule from a PDF file and into the document. But that would violate DRY, since you already know the associated rule, you should just be able to type in the number and the rest happens magically. If you start thinking about functions in this way, you can probably imagine many routines that would make your work more enjoyable.
 
 In theory, you could define the `fre` function above with a bunch of if-else statements and return the text of any rule of evidence based on the rule number. But that would be a lot of if-else statements. Fortunately, in the next chapter, we'll learn a smarter way to do it, using "objects".
-
-## [Previous Chapter: Conditional Logic](/chapters/ch5/)
 
 ***
 

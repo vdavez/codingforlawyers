@@ -13,6 +13,11 @@ body {
 	float: right;
 }
 
+.nav-links li { list-style: none; font-weight: bold; }
+.nav-links { padding-left: 0; clear: both; height: 1em; }
+.nav-links .next { float: right; }
+.nav-links .previous { float: left; }
+
 // Pygments
 
 .hll { background-color: #ffffcc }

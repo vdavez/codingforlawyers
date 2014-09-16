@@ -4,7 +4,7 @@ title: "Chapter 5: Conditional Logic"
 
 Computers, in some respects, are like hostile witnesses on cross-examination. You don't want to ask them open-ended questions, you want to lead the witness. But, unlike human witnesses, computers will always tell you the answer to your question.[^1] In coding, this use of leading questions is referred to "conditional testing".[^2] In this chapter, we'll discuss some of the "questions" you can ask a computer to answer and examine how the computer will answer.
 
-## Tests
+### Tests
 
 Generally there are six questions that a computer is trained to answer:
 
@@ -19,7 +19,7 @@ In the above "thing" is put in quotes because the thing which is being compared 
 
 It is bad form to ask a hostile witness "About how fast would you say you were going?" Instead, you might ask: "Did you drive faster than 55 mph?" In conditional syntax, this would be `speed > 55`. If the computer answers `True`, then you might have your negligence *per se* case in the bag.  
 
-## If
+### If
 
 Since we are talking about witnesses at trial, it's helpful to think about the rules of evidence. Typically, the rules of evidence follow a specific pattern: `if` the evidence you present to a judge meets the test established by the rules of evidence in your jurisdiction `then` the judge shall allow it into evidence. In programming, `if` tests work the same way.
 
@@ -37,7 +37,7 @@ In programming, like in trial, you can evaluate the truth of a statement to prov
 
 One tricky item to note about the above code is to know the difference between what the "=" symbols in the first and second line are doing. In the first line the one "=" is telling the computer to assign the variable `hearsay` with the value `True`. In the second line the two "==" are telling the computer to test whether the two "things" on either side of the test are equal.
 
-## Else - If
+### Else - If
 
 Many times when you are programming you will want to make conditional tests which are more complex than the above example. In these instances often you want to tell the computer to first perform one test, and if that one is not successful to try another test. The first test is an `if` test which is covered above. The second test is usually called an `else-if` test. In other words, else (meaning the previous test failed) ... if (perform this test). Let's take a look at another example.
 
@@ -59,7 +59,7 @@ Then, we run it through our first test: is `relevant` the same as `False`? Well,
 
 But, if `relevant` were `False` in the example, the computer would skip over the second test. That is because the `else if` test only is triggered if the `if` test fails.
 
-## Else
+### Else
 
 When you are making strings of conditionals sometimes you want to tell the computer that if all the tests pass then what it should do. So, for the example above, what happens if the prejudicial effect did *not* weigh the probative value? To program that, we use a `else` statement.
 
@@ -80,14 +80,11 @@ else:
 
 In the above code we have switched the values of `probative_effect` and `prejudicial_effect` but otherwise kept most the code the same. In the last two lines, however, we  added an `else` statement. Unlike `if` and `else-if`, `else` does not contain a test. This is because `else` means if all the other tests have failed, do this.
 
-## Conclusion
+### Conclusion
 
 Conditionals are a way to test whether things are true or not and if they are true then to perform some action. In general these can be thought of similar to how the rules of evidence, if the tests are passed will allow evidence into the record but if they are not passed will not allow evidence into the record.
 
 `If` you have made it this far, you are to be congratulated. In the next chapter, we will get a preview of the real magic of programming: it can save you time and get you more consistent results. Your clients will thank you while you kick up your feet and let the computer do the hard stuff. Ok, so that may be a bit of an exaggeration, but you'll be a better lawyer nonetheless. Read on.
-
-## [Previous Chapter: Using Arrays](/chapters/ch4/)
-## [Next Chapter: DRY and Functions](/chapters/ch6/)
 
 ***
 

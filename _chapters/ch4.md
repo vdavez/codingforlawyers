@@ -10,7 +10,7 @@ justices = ["Roberts","Scalia","Kennedy","Thomas","Ginsburg","Breyer","Alito","S
 
 Let's try a few things in python.[^1]
 
-## Getting Started with Arrays
+### Getting Started with Arrays
 
 Click the "run" button below:
 
@@ -24,7 +24,7 @@ What did we do here? Let's examine line by line:
 
 You'll note that on lines 1, 4, and 7, we have a little `#` symbol at the beginning of the line. This is a way of telling the program that everything after it is a "comment". Think of this as a "note to self" (or, more generously, a note to anyone else reading the source code.)[^2]
 
-## Numbering, Types, and Arrays
+### Numbering, Types, and Arrays
 
 Now, let's try something a little different:
 
@@ -38,7 +38,7 @@ Now, getting back to the script above, on line #8, we took advantage of the `len
 
 In line # 11, we did something really strange. We wrote `str(len(justices))`. Why did we do that? Well, it is because some languages don't let you mix data types. A string can be added to another string. An integer may be substracted from another string. But an integer may not be combined to two other strings. So, we used the `str` function to convert `len(justices)` from an integer, 9, to a string, "9".
 
-## A nested array and a loop?
+### A nested array and a loop?
 
 Now let's do one last exercise with arrays, and this one will take a few minutes but will propel you to the next level of coding. So prepare yourself and soak it in:
 
@@ -60,12 +60,9 @@ Finally, we "step through" the iterator one-by-one.
 
 In the end, you have a Markdown-ready result of the Virginia federal courts. And you did it "programmatically". This is progress.
 
-## Conclusion
+### Conclusion
 
 Arrays are, in many respects, seductively simple. They are lists: no more, no less.[^7] But when you master arrays, worlds of data become accessible and manipulable in ways that seemed totally impossible before. So, go ahead and play with the interactive scripts above. Maybe even consider [reading more about what arrays can do in python](https://docs.python.org/2/tutorial/datastructures.html).[^8] Congratulations on making it this far!
-
-## [Previous Chapter: Data Types](/chapters/ch3/)
-## [Next Chapter: Conditional Logic](/chapters/ch5/)
 
 ***
 

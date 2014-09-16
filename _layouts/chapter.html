@@ -3,3 +3,20 @@ layout: default
 ---
 
 {{ content }}
+
+{% for chapter in site.chapters %}
+  {% if chapter.path == page.path %}
+    {% assign next = forloop.index %}
+    {% assign previous = forloop.index0 | minus:1 %}
+    {% assign count = forloop.length %}
+  {% endif %}
+{% endfor %}
+
+<ul class="nav-links">
+{% if next < count %}
+  <li><a class="next" href="{{ site.chapters[next].url }}">Next chapter: {{ site.chapters[next].title }}</a></li>
+{% endif %}
+{% if previous >= 0 %}
+  <li><a class="previous" href="{{ site.chapters[previous].url }}">Previous chapter: {{ site.chapters[previous].title }}</a></li>
+{% endif %}
+</ul>
