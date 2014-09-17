@@ -48,35 +48,35 @@ Recognizing that Markdown and HTML are closely related, let's explore some more 
 
 Let's say you wanted to make a page that has a link to each federal court's ECF site within your given state.[^3] For this example, I will pick Virginia, which has three federal courts:
 
-1. U.S. District Court for the Eastern District of Virginia,
-2. U.S. District Court for the Western District of Virginia, and
-3. U.S. Court of Appeals for the Fourth Circuit.
+ - U.S. District Court for the Eastern District of Virginia,
+ - U.S. District Court for the Western District of Virginia, and
+ - U.S. Court of Appeals for the Fourth Circuit.
 
 Happily, the URL naming scheme is common to all three courts: "https://ecf.{courtname}.uscourts.gov"[^4]. As we know, in Markdown, writing the link is pretty easy.  
 
-	1. [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
-	2. [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
-	3. [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).
+	- [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
+	- [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
+	- [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).
 
-As it turns out, this is also all you need to do to write a numbered list in Markdown. If you converted the Markdown into HTML, it would appear as follows:
+As it turns out, this is also all you need to do to write a bulleted list in Markdown, and you can use either hyphens or asterisks to make the bulleted list. If you converted the Markdown into HTML, it would appear as follows:
 
 {% highlight html %}
-<ol>
+<ul>
 	<li><a href="https://ecf.vaed.uscourts.gov">U.S. District Court for the Eastern District of Virginia</a>,</li>
 	<li><a href="https://ecf.vawd.uscourts.gov">U.S. District Court for the Eastern District of Virginia</a>, and</li>
 	<li><a href="https://ecf.ca4.uscourts.gov">U.S. Court of Appeals for the Fourth Circuit</a>.</li>
-</ol>
+</ul>
 {% endhighlight %}
 
-You can see that this has more complexity. Let's unpack it a bit. The top tag is `<ol>`, which stands for "ordered list." An ordered list is numbered (more accurately, the order in the list matters). Then, within the `<ol>` tag there is an `<li>` tag. This is a "list item." You're already familiar with the `<a>` tag and the href attribute.
+You can see that this has more complexity. Let's unpack it a bit. The top tag is `<ul>`, which stands for "unordered list." An unordered list is another name for a bulleted list. Then, within the `<ul>` tag there is an `<li>` tag. This is a "list item." You're already familiar with the `<a>` tag and the href attribute.
 
-We can also change the list from an ordered list to an unordered list (such as a set of bullet points). To accomplish that, all we need to do is substitute `<ul>` for `<ol>` in the opening and closing tags. In Markdown, you can use asterisks or hyphens. For example:
+We can also change the list from an unordered list to an ordered list (such as a set of bullet points). To accomplish that, all we need to do is substitute `<ol>` for `<ul>` in the opening and closing tags. In Markdown, you can just use numbers for this. For example:
 
-	* [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
+	1. [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
 
-	* [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
+	2. [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
 
-	* [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).
+	3. [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).
 
 We could stop there. But, let's gussy it up a little more. What if we wanted a heading? Something that said "Virginia Federal Courts" and then "District" and "Circuit" as smaller headings. Markdown makes this easy:
 
@@ -84,29 +84,29 @@ We could stop there. But, let's gussy it up a little more. What if we wanted a h
 
 	## District
 
-	* [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
-	* [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
+	1. [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
+	1. [U.S. District Court for the Western District of Virginia](https://ecf.vawd.uscourts.gov), and
 
 	## Circuit
 
-	* [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).
+	1. [U.S. Court of Appeals for the Fourth Circuit](https://ecf.ca4.uscourts.gov).
 
 This would translate to the following HTML:
 
 {% highlight html %}
 <h1>Virgina Federal Courts</h1>
 <h2>District</h2>
-<ul>
+<ol>
 	<li><a href="https://ecf.vaed.uscourts.gov">U.S. District Court for the Eastern District of Virginia</a>,</li>
 	<li><a href="https://ecf.vawd.uscourts.gov">U.S. District Court for the Western District of Virginia</a>, and</li>
-</ul>
+</ol>
 <h2>Circuit</h2>
-<ul>
+<ol>
 	<li><a href="https://ecf.ca4.uscourts.gov">U.S. Court of Appeals for the Fourth Circuit</a>.</li>
-</ul>
+</ol>
 {% endhighlight %}
 
-Take note that HTML describes the heading as `<h1>` and `<h2>`. This is baked into HTML to show these as headings. Also take note that the District and Circuit lists are separate unordered lists, so the HTML must close the first `<ul>` tag before the Circuit heading is introduced.
+Take note that HTML describes the heading as `<h1>` and `<h2>`. This is baked into HTML to show these as headings. Also take note that the District and Circuit lists are separate ordered lists, so the HTML must close the first `<ul>` tag before the Circuit heading is introduced. We've also tweaked our Markdown so that the numbers are `1.` throughout. This makes it easier to change the order of the list, and Markdown will take care of making the numbers sequential.
 
 Try to copy and paste that HTML into a plain text file, save it as "ecf_va.html", and open the file in the browser. Voilà, you have  a working HTML file with a link to the Virgina federal courts' ECF sites.
 
@@ -116,7 +116,9 @@ At this point, you should have a sense of how Markdown and HTML look and interac
 
 Getting to fully understand HTML, on the other hand, can be much more involved.  HTML5 is remarkably mature, with many ways to customize the presentation of content on the web. There are a number of good tutorials to get you up to speed with more advanced uses of HTML. E.g., [http://www.codecademy.com/en/tracks/htmlcss](http://www.codecademy.com/en/tracks/htmlcss) & [http://learn.shayhowe.com/html-css/](http://learn.shayhowe.com/html-css/). You should take some time to explore them.
 
-If you stopped here, you would be able to meaningfully build beautiful websites using Markdown. But you won't stop here, because it keeps gets better...
+If you stopped here, you would be able to meaningfully build beautiful websites using Markdown -- indeed this one is written in markdown and you can even [edit this page](https://github.com/vzvenyach/codingforlawyers/edit/gh-pages/_chapters/ch2.md). 
+
+But you won't stop here, because it keeps gets better...
 
 ***
 
