@@ -6,13 +6,13 @@ Having survived regex, the next topic is absurdly easy. That topic is "Markdown"
 
 Before diving into Markdown, and at the risk of alienating many readers, I want to remind you of your law-school days. Then (and perhaps even now), when reading a case, you would have a set of highlighters and pens all aimed at allowing you to quickly identify key passages, find the holding, and otherwise annotate important things about a case. Remember that? You would actually *mark* text with a sort of *marker*?
 
-Markdown, when it gets right down to it, is just a way to "mark up" text and describe certain things to a computer, so the computer knows what is important to the eventual reader. That's it. It's a simple, powerful way of making all kinds of marks around plain text in order to make the text more useable.
+Markdown, when it gets right down to it, is just a way to "mark up" text and describe certain things to a computer, so the computer knows what is important to the eventual reader. That's it. It's a simple, powerful way of making all kinds of marks around plain text in order to make the text more usable.
 
 ### An Intro to Markdown Syntax[^1]
 
-Let's say you want to italicize a sentence in a document. In a word processor, you would highlight the sentence and either press Ctrl-I or the little "italics" icon. I suppose there may be other ways, but that's the conventional one.
+Let's say you want to italicize a sentence in a document. In a word processor, you would highlight the sentence and either press <kbd>Ctrl-I</kbd> or the little "italics" icon. I suppose there may be other ways, but those are the conventional ones.
 
-In Markdown, you put an asterisk before and after the sentence. So `*this is an example of an italicized phrase*` would look like: *this is an example of an italicized phrase*.
+In Markdown, to do this you put an asterisk before and after the sentence. So `*this is an example of an italicized phrase*` would look like: *this is an example of an italicized phrase*.
 
 Let's say you wanted to make a word bold? In Markdown, you put *two* asterisks before and after the word. So `**bold**` looks like: **bold**.
 
@@ -20,25 +20,27 @@ And if you want something italicized *and* bold? You've got it: *three* asterisk
 
 So far so good. But, this is intended for the Internet. So, let's try something a little more exciting: a link to a website.
 
-A link to a website requires only slightly more markup. To include a link to this book's website, you would need to put brackets around the link, and put the URL[^2] within parentheses. So, `Tell your friends to visit [Coding for Lawyers](http://codingforlawyers.com)` would look like: Tell your friends to visit [Coding for Lawyers](http://codingforlawyers.com).
+A link to a website requires only slightly more markup. To include a link to this book's website, you would need to put brackets around the link, and put the URL[^2] within parentheses. So, `Tell your friends to visit [Coding for Lawyers](http://codingforlawyers.com)` would look like: Tell your friends to visit [Coding for Lawyers](http://codingforlawyers.com). A second way to do the same thing borrows from emails. Instead of putting the URL in the middle of your paragraph, you can write `[Coding for Lawyers][1]` anywhere in your text, and then at the bottom, put the reference like so: `[1]: http://codingforlawyers.com`.
 
 ### An intro to HTML
 
-Now that you understand a bit of Markdown syntax, we'll turn attention briefly to HTML. As it turns out, the main *reason* Markdowneven  exists  is that writing HTML is annoying. Now, you may be asking, "why would anyone write HTML?" And perhaps before that, you may be asking, "what is HTML?"
+Now that you understand a bit of Markdown syntax, we'll turn attention briefly to HTML. As it turns out, the main *reason* Markdown even  exists  is that writing HTML is annoying. Now, you may be asking, "why would anyone write HTML?" And perhaps before that, you may be asking, "what is HTML?"
 
-HTML is the face of the Internet. Indeed, you are actually reading a page written in HTML *right now.* In short, HTML document is a way to present content to a user on the Internet. It is  not an overstatement that HTML is the most important standard on the Internet.
+HTML is the face of the Internet. Indeed, you are actually reading a page written in HTML *right now.* In short, HTML document is a way to present content to a user on the Internet. HTML is one of the most important standards on the Internet.
 
 But despite its incredible importance, writing in HTML is a total pain. Here's why.
 
 We just learned that to represent an italicized phrase in Markdown, all you need to do is place the phrase within two asterisks. E.g., `"This is a *test of Markdown*."`. In HTML, though, this would be replaced with `"This is a <em>test of Markdown</em>."` And if you wanted to make it italicized and bold, you would need to write "`This is a <strong><em>test of Markdown</em></strong>.`"
 
-What is happening there? Well, HTML uses "tags" to semantically describe text. So, the `<em>` tag tells the browser that everything between the `<em>` tag and the `</em>` tag should be italicized. Similarly, if you use the `<strong>` tag, the browser understands that everything before the "opening" `<strong>` tag and the "closing" `</strong>` tag should be bold.
+What is happening there? Well, HTML uses "tags" to semantically describe text. So, the `<em>` tag tells the browser that everything between the `<em>` tag and the `</em>` tag should be italicized, or as HTML likes to think of it, *em*phasized. Similarly, if you use the `<strong>` tag, the browser understands that everything before the "opening" `<strong>` tag and the "closing" `</strong>` tag should be bold, aka "strong".
 
 But the link to another website is a little more complicated. HTML uses what's called an "anchor" tag (`<a>`) to describe a link. So, if you `Tell your friends to visit <a>Coding for Lawyers</a>`, there is an anchor around "Coding for Lawyers." But if you click on that link, it wouldn't go anywhere, because the target of the link is not defined.
 
 To define the link's target, you define an "attribute" for the tag. Specifically, you would define the "href" attribute. To do this, you would write: `Tell your friends to visit <a href="http://codingforlawyers.com">Coding for Lawyers</a>`.
 
-If you copied and pasted this exact phrase into a plain text file, saved it as "test.html", and opened that file in a browser, you would have a working HTML document. Neat, huh?
+If you copied and pasted this exact phrase into a plain text file, saved it as "test.html", and opened that file in a browser, you would have a working Web page. Neat, huh?
+
+We've now introduced two new acronyms, but we haven't said what they stand for. The first was *HTML*, which stands for Hypertext Markup Language &ndash; there we go again with the markup! The second was *HREF*, which stands for Hypertext Reference. A third acronym that you see all the time in URLs is *HTTP*, which stands for Hypertext Transfer Protocol. Things were very hyper back when people were naming things.
 
 ### More syntax in Markdown and HTML
 
@@ -106,11 +108,11 @@ This would translate to the following HTML:
 
 Take note that HTML describes the heading as `<h1>` and `<h2>`. This is baked into HTML to show these as headings. Also take note that the District and Circuit lists are separate unordered lists, so the HTML must close the first `<ul>` tag before the Circuit heading is introduced.
 
-Try to copy and paste that HTML into a plain text file, save it as "ecf_va.html", and open the file in the browser. Voila, you have  a working HTML file with a link to the Virgina federal courts' ECF sites.
+Try to copy and paste that HTML into a plain text file, save it as "ecf_va.html", and open the file in the browser. Voilà, you have  a working HTML file with a link to the Virgina federal courts' ECF sites.
 
 ### Conclusion
 
-At this point, you should have a sense of how Markdown and HTML look and interact with each other. You should take time to learn the Markdown syntax from the official specification. There are a few other use cases -- especially blockquotes -- in Markdown that you should be aware of.
+At this point, you should have a sense of how Markdown and HTML look and interact with each other. You should take time to learn the Markdown syntax from the [official specification](http://daringfireball.net/projects/markdown/). There are a few other use cases -- especially blockquotes -- in Markdown that you should be aware of.
 
 Getting to fully understand HTML, on the other hand, can be much more involved.  HTML5 is remarkably mature, with many ways to customize the presentation of content on the web. There are a number of good tutorials to get you up to speed with more advanced uses of HTML. E.g., [http://www.codecademy.com/en/tracks/htmlcss](http://www.codecademy.com/en/tracks/htmlcss) & [http://learn.shayhowe.com/html-css/](http://learn.shayhowe.com/html-css/). You should take some time to explore them.
 
@@ -120,7 +122,7 @@ If you stopped here, you would be able to meaningfully build beautiful websites 
 
 ### Endnotes
 
-[^1]: At some point, you should read the entire Markdown syntax documentation. It is very short, but covers a significant amount of ground. You should also know that there are many different "flavors" of Markdown. A flavor is a subtle variation of Markdown to provide specific features, such as footnotes.
+[^1]: At some point, you should read the [entire Markdown syntax documentation](http://daringfireball.net/projects/markdown/). It is very short, but covers a significant amount of ground. You should also know that there are many different "flavors" of Markdown. A flavor is a subtle variation of Markdown to provide specific features, such as footnotes.
 
 [^2]: A URL?!
 
