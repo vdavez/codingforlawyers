@@ -121,7 +121,7 @@ function fre (rulesObj, rule) {
 </body>
 </html>
 
-{% html %}
+{% endhighlight %}
 
 What did we here? As it turns out, those little lines of code do a number of really advanced things that we'll cover in future chapters.[^3] But for now, here's what you need to know:
 
