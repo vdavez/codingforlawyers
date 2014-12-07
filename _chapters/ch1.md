@@ -68,7 +68,7 @@ Congratulations. You have constructed a relatively complex regex! And there's mo
 
 ### Endnotes
 
-[^1]: Many programmers would, I suspect, suggest that this is a strange place to begin. They would argue that it is not really even *coding*. It is my view that this is a proper subject for a beginning chapter. *Cf.* *Brown v. Allen*, 344 U.S. 443, 540 (1953) (Jackson, J., concurring) ("There is no doubt that if there were a super-Supreme Court, a substantial proportion of our reversals of state courts would also be reversed. We are not final because we are infallible, but we are infallible only because we are final."). Plus, by the time you are done with this chapter, you can impress your coding friends that you know basic "regex". A word of caution, the universe of non-coders who will be impressed your knowledge of regex is rather small.
+[^1]: Many programmers would, I suspect, suggest that this is a strange place to begin. They would argue that it is not really even *coding*. It is my view that this is a proper subject for a beginning chapter. *Cf.* *Brown v. Allen*, 344 U.S. 443, 540 (1953) (Jackson, J., concurring) ("There is no doubt that if there were a super-Supreme Court, a substantial proportion of our reversals of state courts would also be reversed. We are not final because we are infallible, but we are infallible only because we are final."). Plus, by the time you are done with this chapter, you can impress your coding friends that you know basic "regex". A word of caution, the universe of non-coders who will be impressed by your knowledge of regex is rather small.
 
 [^2]: A quick review of my curriculum vitae demonstrates that I was not on law review in law school. I am using many footnotes to compensate.
 
