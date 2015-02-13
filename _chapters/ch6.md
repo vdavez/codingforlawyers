@@ -16,7 +16,7 @@ DRY is the same principle that underlies form pleadings and standard contract pr
 
 ### Functions
 
-A core part of implementation for DRY in code is the use of "functions". You use functions to have computers *do* something. You can define a function as simple as "say hello" or as complicated as "cure cancer".[^4] When you "call" a function, you are telling the computer to do the defined thing. With that understanding, let's define a simple function in Javascript. [^5]
+A core part of implementation for DRY in code is the use of "functions". You use functions to have computers *do* something. You can define a function as simple as "say hello" or as complicated as "cure cancer".[^4] When you "call" a function, you are telling the computer to do the defined thing. With that understanding, let's define a simple function in Javascript.[^5]
 
 {% highlight javascript %}
 function readVerdict (verdict) {

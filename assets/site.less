@@ -1,0 +1,33 @@
+@import 'style.css';
+@fontface: 'Lora', serif;
+@margins: 10%;
+@blue: #18f;
+
+body {
+	font-family: @fontface;
+	background-color: #fefefe;
+	font-size: 200%;
+}
+
+.footnote {
+
+}
+
+.container {
+	padding-left: @margins;
+	padding-right: @margins;
+}
+
+.margin-note {
+	color:#f00;
+	border-left-style: solid;
+	width: 250px;
+	float: right;
+}
+
+.nav-links {
+	padding-left: 0; clear: both; height: 1em;
+	li { list-style: none; font-weight: bold;}
+	.next { float: right; font-size: 80%;}
+	.previous { float: left; font-size: 80%;}
+}

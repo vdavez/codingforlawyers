@@ -1,0 +1,33 @@
+@import 'style.css';
+body {
+  font-family: 'Lora', serif;
+  background-color: #fefefe;
+  font-size: 200%;
+}
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.margin-note {
+  color: #f00;
+  border-left-style: solid;
+  width: 250px;
+  float: right;
+}
+.nav-links {
+  padding-left: 0;
+  clear: both;
+  height: 1em;
+}
+.nav-links li {
+  list-style: none;
+  font-weight: bold;
+}
+.nav-links .next {
+  float: right;
+  font-size: 80%;
+}
+.nav-links .previous {
+  float: left;
+  font-size: 80%;
+}
