@@ -133,7 +133,7 @@ If this chapter seemed like you were drinking from a fire hose, that's ok. There
 
 ***
 
-[^1]: A full copy of this object is available at <http://codingforlawyers.com/examples/fre.json>.
+[^1]: A full copy of this object is available at <https://github.com/vzvenyach/codingforlawyers/blob/chapter7/_examples/fre.json>.
 
 [^2]: Javascript can also be executed outside of web browsers using a tool called "node". I personally love node. It's exceptionally fast and, after you get the hang of it, it is sort of fun to work with. That said, it can be very frustrating and is far from intuitive to the uninitiated. All of this is to say, a lot of what node does doesn't work directly in the browser, so you don't need to worry about it now. Just know that it exists.
 
