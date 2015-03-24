@@ -81,7 +81,8 @@ One of the reasons we are now using javascript is because modern web browsers al
 
 ***FINAL NOTE: I don't really have the time or energy to copy and paste the full FRE into this object. Does anyone know if it exists somewhere else? If not, why not?***
 
-The next snippet of code is a bit involved, but try reading it through and see if you get the gist. We'll explain each part in detail. To see it in action, see <http://codingforlawyers.com/examples/ch7_fre.html>.
+The next snippet of code is a bit involved, but try reading it through and see if you get the gist. We'll explain each part in detail. To see it in action, see <https://github.com/vzvenyach/codingforlawyers/blob/chapter7/_examples/ch7_fre.html>.
+
 
 {% highlight html %}
 
