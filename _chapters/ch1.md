@@ -42,6 +42,8 @@ Regex also allows for the shorthand `\w`, which represents any single alphanumer
 
 But, what if you wanted your pattern to match "552a" *and* "552". In other words, you don't *necessarily* want any letters to come after the numbers. To do this, the question mark metacharacter (`?`) comes into play. Here, you could simply write `552a?`, which means that the "a" is optional. By using parentheses for grouping, you can supercharge the use of the `?`. For example, you could write `(\d+)(\w+)?`, which would cover "552", "552a", and "2000bb". By grouping the repeating alphanumeric characters represented by `\w` and putting a question mark afterward, you can basically make all of the letters optional.
 
+Finally, as will be useful when we assemble our regular expression identifying matching portions of the Code, we can indicate spaces within our expression with `\s`. Pairing together `\s` with the optional metacharacter (`?`) allows us to account for unforeseen formatting in the citation (e.g. we want to match `5 U.S.C. § 552 (2006)` as well as `5 U.S.C. §552 (2006)`, just in case).
+
 ### Assembling the United States Code
 
 Believe it or not, we know everything to represent the minimal citation to a section in the United States Code (and even more complicated ones!). Let's return to the 4 minimum components of the citation:
@@ -52,7 +54,7 @@ First, there is the title: `[0-9]{1,2}`. Second there is the "U.S.C. §", which 
 
 Now, let's put together the citation:
 
-`[0-9]{1,2} U\.S\.C\. § \d+(\w+)?( \([0-9]{4}\))?`
+`[0-9]{1,2} U\.S\.C\. §\s?\d+(\w+)?( \([0-9]{4}\))?`
 
 Congratulations. You have constructed a relatively complex regex! And there's more good news, the road gets easier from here.
 
