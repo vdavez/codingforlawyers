@@ -50,7 +50,7 @@ Believe it or not, we know everything to represent the minimal citation to a sec
 
 (DIAGRAM OF U.S.C. CITATION)
 
-First, there is the title: `[0-9]{1,2}`. Second there is the "U.S.C. §", which requires some escaping of the periods but is written as follows: `U\.S\.C\. §`. Third, there is the section: `\d+(\w+)?`.[^7] And finally, there is the date: `[0-9]{1,2}`[^8]. As a reminder for the date, before we put it all together: the date is optional.
+First, there is the title: `[0-9]{1,2}`. Second there is the "U.S.C. §", which requires some escaping of the periods but is written as follows: `U\.S\.C\. §`. Third, there is the section: `\d+(\w+)?`.[^7] And finally, there is the date: `[0-9]{4}`[^8]. As a reminder for the date, before we put it all together: the date is optional.
 
 Now, let's put together the citation:
 
