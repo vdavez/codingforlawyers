@@ -82,6 +82,8 @@ We could stop there. But, let's gussy it up a little more. What if we wanted a h
 
 	# Virgina Federal Courts
 
+  This is a list of the federal courts in the Commonwealth of Virginia.
+
 	## District
 
 	1. [U.S. District Court for the Eastern District of Virginia](https://ecf.vaed.uscourts.gov),
@@ -95,6 +97,7 @@ This would translate to the following HTML:
 
 {% highlight html %}
 <h1>Virgina Federal Courts</h1>
+<p>This is a list of the federal courts in the Commonwealth of Virginia.</p>
 <h2>District</h2>
 <ol>
 	<li><a href="https://ecf.vaed.uscourts.gov">U.S. District Court for the Eastern District of Virginia</a>,</li>
@@ -116,7 +119,7 @@ At this point, you should have a sense of how Markdown and HTML look and interac
 
 Getting to fully understand HTML, on the other hand, can be much more involved.  HTML5 is remarkably mature, with many ways to customize the presentation of content on the web. There are a number of good tutorials to get you up to speed with more advanced uses of HTML. E.g., [http://www.codecademy.com/en/tracks/htmlcss](http://www.codecademy.com/en/tracks/htmlcss) & [http://learn.shayhowe.com/html-css/](http://learn.shayhowe.com/html-css/). You should take some time to explore them.
 
-If you stopped here, you would be able to meaningfully build beautiful websites using Markdown -- indeed this one is written in markdown and you can even [edit this page](https://github.com/vzvenyach/codingforlawyers/edit/gh-pages/_chapters/ch2.md). 
+If you stopped here, you would be able to meaningfully build beautiful websites using Markdown -- indeed this one is written in markdown and you can even [edit this page](https://github.com/vzvenyach/codingforlawyers/edit/gh-pages/_chapters/ch2.md).
 
 But you won't stop here, because it keeps gets better...
 

@@ -1,0 +1,35 @@
+<html>
+<head><title>Federal Rules</title></head>
+<body>
+<h1>Federal Rules of Evidence</h1>
+
+<!-- The <div> tag is a way of describing a logical section of the website. Think of it as a sort of bookmark. Here, it has an "id" attribute called "fre". This will be important in the script below. -->
+<div id="fre"></div>
+
+<!-- Here we are loading jQuery, which is a javascript library that is absolutely ubiquitous on the web. -->
+<script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+
+<!-- Here's the fun part. Get ready! -->
+
+<script>
+
+// Here, we are using a function from jQuery called $.getJSON. It is getting a file called fre.json, extracts the data, converts it into the `rules` object we used before, and passes the object as an argument
+$.getJSON(".//fre.json", function (ruleObj) {
+
+    // Here we are accessing the "fre" div from above and injecting, as html, the result of the call to the fre function, passing the rules object and the number of the desired rule
+    $("#fre").html(fre(ruleObj, 101));
+})
+
+
+// This is the function we defined earlier, except we changed the return value if the rule is not included in the list
+function fre (rulesObj, rule) {
+  r = rulesObj[rule]
+  if (r) {
+    return "<h2> Rule " + rule + ". " + r["heading"] + "</h2><pre>" + r["text"] + "</pre>";
+  }
+    return null;
+}
+
+</script>
+</body>
+</html>
